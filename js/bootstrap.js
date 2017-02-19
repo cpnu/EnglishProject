@@ -16,7 +16,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================== */
+var nest = d3.nest()
+    //.key(function(d) { return d.Conference; })
+    //.key(function(d) { return d.Division; })
+    .key(function(d) { return d.Anglais; })
+    .key(function(d) { return d.Français; })
 
+d3.csv("vocab.csv", type, function(error, data) {
+
+  if (error) throw error;
+
+  var i = 0;
+  function addKid(){
+    if (i < 5){
+      var newRow = document.createElement('tr');
+      newRow.innerHTML = '<td> <input type="text" name="Anglais'+i+'" ><td> <input type="text" name="Français'+i+'" ></td><td><input type="button" id="add_kid()" onClick="addKid()" value="+" /><input type="button" value="-" onclick="removeKid(this.parentNode)"></td>';
+      document.getElementById('kids').appendChild(newRow);
+      i++;
+    }
+  }
+   
+  function removeKid(element){
+    document.getElementById('kids').removeChild(element.parentNode);
+    i--;
+  }
+}
 
 !function ($) {
 
