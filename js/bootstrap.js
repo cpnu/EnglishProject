@@ -16,13 +16,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================== */
+d3.text("voca.csv", function(data) {
+                var parsedCSV = d3.csv.parseRows(data);
+
+                var container = d3.select("body")
+                    .append("table")
+
+                    .selectAll("tr")
+                        .data(parsedCSV).enter()
+                        .append("tr")
+
+                    .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+            });
+/*
 var nest = d3.nest()
     //.key(function(d) { return d.Conference; })
     //.key(function(d) { return d.Division; })
     .key(function(d) { return d.Anglais; })
     .key(function(d) { return d.Français; })
 
-d3.csv("vocab.csv", type, function(error, data) {
+d3.csv("voca.csv", type, function(error, data) {
 
   if (error) throw error;
 
@@ -41,7 +57,7 @@ d3.csv("vocab.csv", type, function(error, data) {
     i--;
   }
 }
-
+*/
 !function ($) {
 
   "use strict"; // jshint ;_;

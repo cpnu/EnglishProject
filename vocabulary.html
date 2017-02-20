@@ -84,7 +84,26 @@
                                     <h1 class="media-heading ruler-bottom">Hotel</h1>
                                     <div class="span8 offset1">
                                     <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede
+<script src="d3.min.js?v=3.2.8"></script>
 
+        <script type="text/javascript"charset="utf-8">
+            d3.text("voca.csv", function(data) {
+                var parsedCSV = d3.csv.parseRows(data);
+
+                var container = d3.select("body")
+                    .append("table")
+
+                    .selectAll("tr")
+                        .data(parsedCSV).enter()
+                        .append("tr")
+
+                    .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+            });
+        </script>
+        <!--
                                     <table>
                                         <tr>
                                             <th align="center"><p> Français </p></th>
@@ -94,13 +113,11 @@
                                             <tr>
                                                 <td align="center"><p><input type="text" name="Français"></p></td>
                                                 <td align="center"><p><input type="text" name="Anglais"></p></td>
-                                                <!--<td>
-                                                 <input type="button" id="add_kid()" onClick="addKid()" value="+" />
-                                                </td>-->
+                                                
                                             </tr>
                                         </tbody>
                                     
-                                    </table>
+                                    </table>-->
                                     </p>
 
 
