@@ -32,9 +32,9 @@
                     </div>
                 </div>
                 <div class="container">
-                  <div class="banner">
-                  </div>
+                  <div class="banner"></div>
                 </div>
+            </div>
             <div class="menu">
                 <div class="navbar">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -83,26 +83,25 @@
                                   <div class="media-body">
                                     <h1 class="media-heading ruler-bottom">Hotel</h1>
                                     <div class="span8 offset1">
-                                    <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede
-<script src="d3.min.js?v=3.2.8"></script>
+                                    <p>Morbi interdum mollis sapien. Sed ac ri
+                                        <script src="http://d3js.org/d3.v3.min.js"></script>
+                                            <script>
+                                                d3.text("voca2.csv", function(data) {
+                                                    var parsedCSV = d3.csv.parseRows(data);
 
-        <script type="text/javascript"charset="utf-8">
-            d3.text("voca.csv", function(data) {
-                var parsedCSV = d3.csv.parseRows(data);
+                                                    var container = d3.select("body")
+                                                                        .append("table")
 
-                var container = d3.select("body")
-                    .append("table")
+                                                                        .selectAll("tr")
+                                                                            .data(parsedCSV).enter()
+                                                                            .append("tr")
 
-                    .selectAll("tr")
-                        .data(parsedCSV).enter()
-                        .append("tr")
-
-                    .selectAll("td")
-                        .data(function(d) { return d; }).enter()
-                        .append("td")
-                        .text(function(d) { return d; });
-            });
-        </script>
+                                                                        .selectAll("td")
+                                                                            .data(function(d) { return d; }).enter()
+                                                                            .append("td")
+                                                                            .text(function(d) { return d; });
+                                                });
+                                            </script>
         <!--
                                     <table>
                                         <tr>
@@ -147,7 +146,7 @@
                         <div class="tab-pane fade" id="health">
                                 <div class="media">
                                   <div class="media-body">
-                                    <h1 class="media-heading ruler-bottom">Healt</h1>
+                                    <h1 class="media-heading ruler-bottom">Health</h1>
                                     <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede</p>
                                     
                                   </div>
@@ -177,6 +176,7 @@
              
         </div>
         </div>
+            </div>
         <div class="site-footer">
             <div class="container">
               <div class="row-fluid">

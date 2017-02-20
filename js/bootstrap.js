@@ -16,8 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================== */
-d3.text("voca.csv", function(data) {
-                var parsedCSV = d3.csv.parseRows(data);
+/*                var parsedCSV = d3.csv.parseRows(data);
 
                 var container = d3.select("body")
                     .append("table")
@@ -31,7 +30,7 @@ d3.text("voca.csv", function(data) {
                         .append("td")
                         .text(function(d) { return d; });
             });
-/*
+
 var nest = d3.nest()
     //.key(function(d) { return d.Conference; })
     //.key(function(d) { return d.Division; })
