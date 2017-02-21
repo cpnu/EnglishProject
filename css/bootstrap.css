@@ -8,6 +8,53 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+#menu-deroulant, #menu-deroulant ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#menu-deroulant {
+/* on centre le menu dans la page */
+    text-align: center;
+}
+#menu-deroulant li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+}
+#menu-deroulant ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+}
+#menu-deroulant a {
+    text-decoration: none;
+    display: inline-block;
+    color:#f5f5f5;
+    text-align: center;
+    font-family: default;
+}
+#menu-deroulant ul {
+    position: relative;
+/* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    text-align: center;
+    z-index: 1000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+   /* font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  font-style: bold;*/
+
+    
+}
+#menu-deroulant li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+    left: auto;
+
+    
+}
+
+
  .marge {
 margin-left: 5em;
 }
