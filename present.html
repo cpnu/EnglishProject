@@ -336,6 +336,19 @@ Explications : Elle ne peut pas venir car en ce moment, elle s'occupe de sa soeu
                                     <h1 class="media-heading ruler-bottom">Present continuous exercice</h1>
                                     
                                     <p>
+                                    <script type="text/javascript"> 
+                                      function visibilite(thingId) 
+                                      { 
+                                        var targetElement; 
+                                        targetElement = document.getElementById(thingId) ; 
+                                        if (targetElement.style.display == "none") 
+                                        { 
+                                          targetElement.style.display = "" ; 
+                                        } else { 
+                                          targetElement.style.display = "none" ; 
+                                        } 
+                                      } 
+                                    </script> 
                                     <script type="text/javascript">
                                     function controler(){
                                       var reponses = new Array ("is raining", "am getting", "is reading", "is going", "is visiting", "is swimming", "is waiting", "are moving", "is raining ", "is repairing" );
@@ -377,6 +390,10 @@ Explications : Elle ne peut pas venir car en ce moment, elle s'occupe de sa soeu
                                       }
                                       if (erreur >= 1){
                                         window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
+                                        var button = document.createElement("input" ) ;
+                                        button.type = "button" ;
+                                        button.setAttribute("onClick","choixlettre") ;
+        
                                         return false ;
                                       }
                                     }
@@ -391,7 +408,12 @@ Explications : Elle ne peut pas venir car en ce moment, elle s'occupe de sa soeu
                                       
                                       <form name="formulaire" action="URI" method="GET" onSubmit="return controler() ;">
                                       <p>
-                                       1. It <input size="8" type="text" name="a"> (rain) heavily. <br>
+                                       1. It <input size="8" type="text" name="a"> (rain) heavily. 
+                                      <a href="" onmouseover="javascript:visibilite('id_div_1'); return false;" onmouseout="javascript:visibilite('id_div_1'); return false;">Aide</a> 
+                                      <div id="id_div_1" style="display:none;"> 
+                                        Texte à masquer, afficher 
+                                        </div> 
+                                        <br>
                                        2. I <input size="8" type="text" name="b"> (get) up late. <br>
                                        3. He <input size="8" type="text" name="c"> (read) in bed. <br>
                                        4. She <input size="8" type="text" name="d"> (go) to school on foot. <br>
@@ -407,41 +429,61 @@ Explications : Elle ne peut pas venir car en ce moment, elle s'occupe de sa soeu
                                         <input type="reset" name="effacer" value="Reset">
                                         <input type="submit" name="envoyer" value="Submit">  
                                       <p>
+                                        <a href="" onmouseover="javascript:visibilite('id_div_2'); return false;" onmouseout="javascript:visibilite('id_div_2'); return false;">Answers</a> 
+                                        <div id="id_div_2" style="display:none;"> <p>
+                                        1. It [Pas de réponse]  is raining (rains) heavily. <br>
+
+2. I am getting up late.<br>
+
+3. He is reading in bed.<br>
+
+4. She is going to school on foot.<br>
+
+5. He is visiting Algeria.<br>
+
+6. He is selling his old book.<br>
+
+7. He is playing in Real Madrid.<br>
+
+8. They are repairing the car.<br>
+
+9. He is working in France.<br>
+
+10. She [Pas de réponse]  is swimming (swims) well.<br>
+
+11. The teacher [Pas de réponse]  is explaining (explains) the lesson.<br>
+
+12. What are you doing ? Can't you see I [Pas de réponse]  am waiting (wait) for you !<br>
+
+13. They [Pas de réponse]  are leaving (leave) for Paris in August.<br>
+
+14. We [Pas de réponse]  are moving (move) in September.<br>
+
+15. Look, it [Pas de réponse]  is raining (rains). </p>
+                                        </div> 
+                                      <!--
+                                      <script type="text/javascript">
+                                      function ouvrirFermerSpoiler(div) {
+                                          var divContenu = div.getElementsByTagName('div')[0];
+                                          if(divContenu.style.display == 'none') {
+                                              divContenu.style.display = 'block';
+                                          } else {
+                                              divContenu.style.display = 'none';
+                                          }
+                                      }
+                                      </script>
                                       
-                                      <A HREF='consult2.php?id_fiche=$row[0]' TARGET=popup onclick='window.open('','popup','width=200,height=400,left=50,top=50,scrollbars=1')'><B>".$row[1]."</B></A>
+                                      <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <div class="contenuSpoiler">
+                                            Texte caché
+                                        </div>
+                                      </div>
+                                      -->
                                       </script>
                                       </table>
                                       </form> 
 
-<!--1. It [Pas de réponse]  is raining (rains) heavily.
 
-2. I [Pas de réponse]  am getting (get) up late.
-
-3. He [Pas de réponse]  is reading (reads) in bed.
-
-4. She [Pas de réponse]  is going (goes) to school on foot.
-
-5. He [Pas de réponse]  is visiting (visits) Algeria.
-
-6. He [Pas de réponse]  is selling (sells) his old book.
-
-7. He [Pas de réponse]  is playing (plays) in Real Madrid.
-
-8. They [Pas de réponse]  are repairing (repair) the car.
-
-9. He [Pas de réponse]  is working (works) in France.
-
-10. She [Pas de réponse]  is swimming (swims) well.
-
-11. The teacher [Pas de réponse]  is explaining (explains) the lesson.
-
-12. What are you doing ? Can't you see I [Pas de réponse]  am waiting (wait) for you !
-
-13. They [Pas de réponse]  are leaving (leave) for Paris in August.
-
-14. We [Pas de réponse]  are moving (move) in September.
-
-15. Look, it [Pas de réponse]  is raining (rains).-->
 
                                     
                                     </p>

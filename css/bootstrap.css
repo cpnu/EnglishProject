@@ -7,6 +7,17 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+div.spoiler {
+    padding: 10px;
+    width: 5%;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+ 
+div.spoiler div.contenuSpoiler {
+    display: none;
+}
+
  table {
   border-width:1px; 
   border-style:solid; 
