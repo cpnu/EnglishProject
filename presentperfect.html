@@ -25,6 +25,99 @@
         <![endif]-->
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+        <script type="text/javascript">
+          function ouvrirFermerSpoiler(div) {
+                var divContenu = div.getElementsByTagName('div')[0];
+                if(divContenu.style.display == 'none') {
+                    divContenu.style.display = 'block';
+                } else {
+                    divContenu.style.display = 'none';
+                }
+            }
+            function visibilite(thingId) { 
+              var targetElement; 
+              targetElement = document.getElementById(thingId) ; 
+              if (targetElement.style.display == "none") 
+              { 
+                targetElement.style.display = "" ; 
+              } else { 
+                targetElement.style.display = "none" ; 
+              } 
+            } 
+
+            function controler(){
+              var reponses = new Array ("ihave been making", "has won", "have been tidying", "has come", "have been living", "has done", "has lost", "has already sown" );
+                                      var erreur = 0 ;
+                                      if (document.formulaire.a.value != reponses[0]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.b.value != reponses[1]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.c.value != reponses[2]){ 
+                                        erreur = erreur + 1 ;
+                                      }
+                                      if (document.formulaire.d.value != reponses[3]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.e.value != reponses[4]){ 
+                                        erreur = erreur + 1 ;
+                                       }
+                                      if (document.formulaire.f.value != reponses[5]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.g.value != reponses[6]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.h.value != reponses[7]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      
+                                      
+                                      if (erreur == 0){
+                                        window.alert("Aucune erreur. BRAVO !") ;
+                                        return false ;
+                                      }
+                                      if (erreur >= 1){
+                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
+                                        return false ;
+                                      }
+                                    }
+
+                                    function controler1(){
+                                      var reponses = new Array ("has stolen", "have bought", "have written", "Have you been", "have not finished", "has eaten");
+                                      var erreur = 0 ;
+                                      if (document.formulaire1.a.value != reponses[0]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.b.value != reponses[1]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.c.value != reponses[2]){ 
+                                        erreur = erreur + 1 ;
+                                      }
+                                      if (document.formulaire1.d.value != reponses[3]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.e.value != reponses[4]){ 
+                                        erreur = erreur + 1 ;
+                                       }
+                                      if (document.formulaire1.f.value != reponses[5]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      
+                                      
+                                      if (erreur == 0){
+                                        window.alert("Aucune erreur. BRAVO !") ;
+                                        return false ;
+                                      }
+                                      if (erreur >= 1){
+                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
+                                        return false ;
+                                      }
+                                    }
+                                      </script> 
+
             <div class="wrap-bg">
                 <div class="site-header">
                     <div class="logo">
@@ -139,50 +232,22 @@
                                 <div class="media">
                                   <div class="media-body">
                                     <h1 class="media-heading ruler-bottom">Present perfect exercice</h1>
-
-                                    <p><script type="text/javascript">
-                                    function controler1(){
-                                      var reponses = new Array ("has stolen", "have bought", "have written", "Have you been", "have not finished", "has eaten");
-                                      var erreur = 0 ;
-                                      if (document.formulaire1.a.value != reponses[0]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.b.value != reponses[1]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.c.value != reponses[2]){ 
-                                        erreur = erreur + 1 ;
-                                      }
-                                      if (document.formulaire1.d.value != reponses[3]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.e.value != reponses[4]){ 
-                                        erreur = erreur + 1 ;
-                                       }
-                                      if (document.formulaire1.f.value != reponses[5]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      
-                                      
-                                      if (erreur == 0){
-                                        window.alert("Aucune erreur. BRAVO !") ;
-                                        return false ;
-                                      }
-                                      if (erreur >= 1){
-                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
-                                        return false ;
-                                      }
-                                    }
-                                      </script> 
-
+                                    <p>
                                       <h3>Fill the gaps</h3>
                                       <br>
-                                      <p> Chose the rigth form between simple present and present continuous
+                                      <p> Conjugate the verbs in present perfect.
                                        <!--<p class="listedesmots"><u>mots à utiliser :</u>
                                        cette, amis, maison, ce, poissons, se, rivière,  car, aussi, pont
                                       </p>-->
                                       
                                       <form name="formulaire1" action="URI" method="GET" onSubmit="return controler1() ;">
+
+                                      <p>
+                                      <img src="point_interro.png" alt = "point interro" width="20" align="left"/>
+                                        <a href="" onmouseover="javascript:visibilite('id_div_1'); return false;" onmouseout="javascript:visibilite('id_div_1'); return false;"><b>Help </b></a> 
+                                        <div id="id_div_1" style="display:none;"> 
+                                          <p> Present perfect : have + participe passé </p>
+                                        </div>
                                       <p>
                                        1. Peter <input size="8" type="text" name="a"> (steal) my trainers! <br>
                                        2. I <input size="8" type="text" name="b"> (buy) this magazine. <br>
@@ -200,29 +265,43 @@
                                       </table>
                                       </form>  
                                       </p>
-                                   <!--1. Peter [Pas de réponse]  has stolen (steal) my trainers!
-Explications : HAS (3e personne du singulier, accord avec Peter) STOLEN (participe passé irrégulier du verbe STEAL)
+                                   
+                                     <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <p><b>Click <u>here</u> to get the correction</b></p>
+                                        <div class="contenuSpoiler">
+                                            <p>
+                                            1. Peter has stolen my trainers!<br>
+                                            Peter m'a volé mes chaussures de sport ! <br>
+                                            <b>Explication : </b> HAS (3e personne du singulier, accord avec Peter) STOLEN (participe passé irrégulier du verbe STEAL)<br><br>
 
 
-2. I [Pas de réponse]  have bought (buy) this magazine.
-Explications : HAVE (1ère p du singulier, accord avec I) BOUGHT (participe passé irrégulier du verbe BUY)
+                                            2. I have bought this magazine.<br>
+                                            J'ai acheté ce magazine. <br>
+                                            <b>Explication : </b> HAVE (1ère p du singulier, accord avec I) BOUGHT (participe passé irrégulier du verbe BUY)<br><br>
 
 
-3. We [Pas de réponse]  have written (write) three pages this afternoon.
-Explications : HAVE (1ère p du pluriel, accord avec WE) WRITTEN (participe passé irrégulier du verbe WRITE)
+                                            3. We have written three pages this afternoon.<br>
+                                            Nous avons écrit 3 pages cet après-midi.<br>
+                                            <b>Explication : </b> HAVE (1ère p du pluriel, accord avec WE) WRITTEN (participe passé irrégulier du verbe WRITE)<br><br>
 
 
-4. [Pas de réponse]  Have you been (you/be) to London?
-Explications : Question : Auxiliaire-sujet-verbe. Accord avec YOU. BE est un verbe irrégulier. 
+                                            4. Have you been to London?<br>
+                                            Es tu allé à Londres ?<br>
+                                            <b>Explication : </b> Question : Auxiliaire-sujet-verbe. Accord avec YOU. BE est un verbe irrégulier. <br><br>
 
 
-5. I [Pas de réponse]  have not finished (not/finish) my homework yet.
-Explications : Phrase négative. FINISH est un verbe régulier. Accord avec I.
+                                            5. I have not finished my homework yet.<br>
+                                            Je n'ai pas encore fini mes dehors. <br>
+                                            <b>Explication : </b> Phrase négative. FINISH est un verbe régulier. Accord avec I.<br><br>
 
 
-6. My dog [Pas de réponse]  has eaten (eat) all my cookies!
-Explications : HAS (3e p du singulier, accord avec MY DOG qu'on peut remplacer par IT) EATEN (participe passé irrégulier du verbe EAT).
--->
+                                            6. My dog has eaten all my cookies!<br>
+                                            Mon chien a mangé tous mes gâteaux ! <br>
+                                            <b>Explication : </b> HAS (3e p du singulier, accord avec MY DOG qu'on peut remplacer par IT) EATEN (participe passé irrégulier du verbe EAT).
+
+                                            </p>
+                                        </div>
+                                      </div>
                                    
                                   </div>
                                 </div>
@@ -263,59 +342,24 @@ Explications : HAS (3e p du singulier, accord avec MY DOG qu'on peut remplacer p
                                     <h1 class="media-heading ruler-bottom">Present perfect continuous exercice</h1>
                                     
                                     <p>
-                                    <script type="text/javascript">
-                                    function controler(){
-                                      var reponses = new Array ("ihave been making", "has won", "have been tidying", "has come", "have been living", "has done", "has lost", "has already sown" );
-                                      var erreur = 0 ;
-                                      if (document.formulaire.a.value != reponses[0]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.b.value != reponses[1]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.c.value != reponses[2]){ 
-                                        erreur = erreur + 1 ;
-                                      }
-                                      if (document.formulaire.d.value != reponses[3]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.e.value != reponses[4]){ 
-                                        erreur = erreur + 1 ;
-                                       }
-                                      if (document.formulaire.f.value != reponses[5]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.g.value != reponses[6]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.h.value != reponses[7]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      
-                                      
-                                      if (erreur == 0){
-                                        window.alert("Aucune erreur. BRAVO !") ;
-                                        return false ;
-                                      }
-                                      if (erreur >= 1){
-                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
-                                        return false ;
-                                      }
-                                    }
-                                      </script> 
-
                                       <h3>Fill the gaps</h3>
                                       <br>
-                                      <p> Conjuge the verbs in present continuous
+                                      <p> Conjugate the verbs in present perfect continuous or in present perfect.
                                        <!--<p class="listedesmots"><u>mots à utiliser :</u>
                                        cette, amis, maison, ce, poissons, se, rivière,  car, aussi, pont
                                       </p>-->
                                       
                                       <form name="formulaire" action="URI" method="GET" onSubmit="return controler() ;">
                                       <p>
+                                      <img src="point_interro.png" alt = "point interro" width="20" align="left"/>
+                                        <a href="" onmouseover="javascript:visibilite('id_div_2'); return false;" onmouseout="javascript:visibilite('id_div_2'); return false;"><b>Help </b></a> 
+                                        <div id="id_div_2" style="display:none;"> 
+                                          <p> Present perfect continuous : exprime une action qui a commencé dans le passé mais qui a un prolongement dans le présent. <br> Present perfect simple : Pas de repère dans le temps. </p>
+                                        </div>
+                                      <p>
                                        1. They <input size="8" type="text" name="a"> (make) all that noise for two hours now. <br>
                                        2. It's the first time our football team <input size="8" type="text" name="b"> (win) the title. <br>
-                                       3. What have you been doing in your room? I <input size="8" type="text" name="c"> (tidy) away my clothes. <br>
+                                       3. What have you been doing in your room? I <input size="8" type="text" name="c"> (tidy) up my clothes. <br>
                                        4. This is the only time Karl <input size="8" type="text" name="d"> (come) here. <br>
                                        5. How long have you been living here? We <input size="8" type="text" name="e">(live) here for twenty years. <br>
                                        6. Mary <input size="8" type="text" name="f"> (do) nothing so far.<br>
@@ -329,23 +373,47 @@ Explications : HAS (3e p du singulier, accord avec MY DOG qu'on peut remplacer p
                                         <input type="submit" name="envoyer" value="Submit">  
                                       <p>
                                       </table>
-                                      </form> <!--
-                                    1. They [Pas de réponse]  have been making (make) all that noise for two hours now.
-
-2. It's the first time our football team [Pas de réponse]  has won (win) the title.
-
-3. What have you been doing in your room? I [Pas de réponse]  have been tidying (tidy) away my clothes.
-
-4. This is the only time Karl [Pas de réponse]  has come (come) here.
-
-5. How long have you been living here? We [Pas de réponse]  have been living (live) here for twenty years.
-
-6. Mary [Pas de réponse]  has done (do) nothing so far.
-
-7. Bob [Pas de réponse]  has lost (lose) his purse, he's looking for it.
-
-8. The farmer [Pas de réponse]  has already sowed -ou- has already sown (already/sow) his seeds.-->
+                                      </form> 
                                     </p>
+                                    <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <p><b>Click <u>here</u> to get the correction</b></p>
+                                        <div class="contenuSpoiler">
+                                            <p>
+                                            1. They have been making all that noise for two hours now.<br>
+                                            Cela fait maintenant deux heures qu'ils font tout ce bruit.<br>
+                                            <b>Explications : </b>C'est une action qui a commencé dans le passé mais qui a un prolongement dans le présent.<br><br>
+
+                                            2. It's the first time our football team has won the title.<br>
+                                            C'est la première fois que notre équipe de foot gagne le titre. <br>
+                                            <b>Explications : </b> C'est une action passée qui a des conséquences sur le présent.<br><br>
+
+                                            3. What have you been doing in your room? I have been tidying up my clothes.<br>
+                                            Que faisais-tu dans ta chambre ? J'ai rangé mes vêtements.<br>
+                                            <b>Explications : </b> C'est une action qui a commencé dans le passé mais qui a un prolongement dans le présent. <br><br>
+
+                                            4. This is the only time Karl has come here.<br>
+                                            C'est la seule fois que Karl est venu ici. <br>
+                                            <b>Explications : </b>C'est une actions passée qui a des conséquences sur le présent.<br><br>
+
+                                            5. How long have you been living here? We have been living here for twenty years.<br>
+                                            Depuis combien de temps vis-tu ici ? Nous vivons icidepuis 20 ans. <br> 
+                                            <b>Explications : </b> C'est une action qui a commencé dans le passé mais qui a un prolongement dans le présent.<br><br>
+
+                                            6. Mary has done nothing so far.<br>
+                                            Mary n'a rien fait jusque là. <br>
+                                            <b>Explications : </b> C'est une action qui a commencé dans le passé et qui est encore en progression au moment où l'on parle <br><br>
+
+                                            7. Bob has lost his purse, he's looking for it.<br>
+                                            Bob a perdu son sac, il est en train de le chercher. <br>
+                                            <b>Explications : </b>C'est une action qui a commencé dans le passé et qui est encore en progression au moment où l'on parle <br><br>
+
+                                            8. The farmer has already sowed -ou- has already sown his seeds.<br>
+                                            Le fermier a déjà semé ses graines. <br>
+                                            <b>Explications : </b> C'est une action passée qui a des conséquences sur le présent.
+
+                                            </p>
+                                        </div>
+                                      </div>
                                     
                                   </div>
                                 </div>

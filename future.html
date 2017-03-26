@@ -25,6 +25,119 @@
         <![endif]-->
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+        <script type="text/javascript">
+        function ouvrirFermerSpoiler(div) {
+                var divContenu = div.getElementsByTagName('div')[0];
+                if(divContenu.style.display == 'none') {
+                    divContenu.style.display = 'block';
+                } else {
+                    divContenu.style.display = 'none';
+                }
+            }
+            function visibilite(thingId) { 
+              var targetElement; 
+              targetElement = document.getElementById(thingId) ; 
+              if (targetElement.style.display == "none") 
+              { 
+                targetElement.style.display = "" ; 
+              } else { 
+                targetElement.style.display = "none" ; 
+              } 
+            } 
+        function controler1(){
+                                      var reponses = new Array ("will send", "will be sleeping", "will arrest", "will pick up", "will clap", "will rain", "will be speaking", "will subscribe", "will get", "will be attending" );
+                                      var erreur = 0 ;
+                                      if (document.formulaire1.a.value != reponses[0]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.b.value != reponses[1]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.c.value != reponses[2]){ 
+                                        erreur = erreur + 1 ;
+                                      }
+                                      if (document.formulaire1.d.value != reponses[3]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.e.value != reponses[4]){ 
+                                        erreur = erreur + 1 ;
+                                       }
+                                      if (document.formulaire1.f.value != reponses[5]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.g.value != reponses[6]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.h.value != reponses[7]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.i.value != reponses[8]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.j.value != reponses[9]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      
+                                      if (erreur == 0){
+                                        window.alert("Aucune erreur. BRAVO !") ;
+                                        return false ;
+                                      }
+                                      if (erreur >= 1){
+                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
+                                        return false ;
+                                      }
+                                    }
+                                    function controler(){
+                                      var reponses = new Array ("went", "wrote", "played", "spoke", "bought", "was", "saw", "drive", "brought", "worked", "left", "taught" );
+                                      var erreur1 = 0 ;
+                                      if (document.formulaire.a.value != reponses[0]){ 
+                                        erreur1 = erreur1 + 1 ; 
+                                      }
+                                      if (document.formulaire.b.value != reponses[1]){ 
+                                        erreur1 = erreur1 + 1 ; 
+                                      }
+                                      if (document.formulaire.c.value != reponses[2]){ 
+                                        erreur1 = erreur1 + 1 ;
+                                      }
+                                      if (document.formulaire.d.value != reponses[3]){ 
+                                        erreur1 = erreur1 + 1 ; 
+                                      }
+                                      if (document.formulaire.e.value != reponses[4]){ 
+                                        erreur1 = erreur1 + 1 ;
+                                       }
+                                      if (document.formulaire.f.value != reponses[5]){ 
+                                        erreur1 = erreur1 + 1 ; 
+                                      }
+                                      if (document.formulaire.g.value != reponses[6]){ 
+                                        erreur1 = erreur1 + 1 ; 
+                                      }
+                                      if (document.formulaire.h.value != reponses[7]){ 
+                                        erreur1 = erreur1 + 1 ; 
+                                      }
+                                      if (document.formulaire.i.value != reponses[8]){ 
+                                        erreur1 = erreur1 + 1 ; 
+                                      }
+                                      if (document.formulaire.j.value != reponses[9]){ 
+                                        erreur1 = erreur1 + 1 ; 
+                                      }
+                                      if (document.formulaire.k.value != reponses[10]){ 
+                                        erreur1 = erreur1 + 1 ; 
+                                      }
+                                      if (document.formulaire.l.value != reponses[11]){ 
+                                        erreur1 = erreur1 + 1 ; 
+                                      }
+                                      
+                                      if (erreur1 == 0){
+                                        window.alert("Aucune erreur. BRAVO !") ;
+                                        return false ;
+                                      }
+                                      if (erreur1 >= 1){
+                                        window.alert("Il reste encore " + erreur1 + " erreurs à corriger. Courage !") ;
+                                        return false ;
+                                      }
+                                    }
+                                      </script> 
+
             <div class="wrap-bg">
                 <div class="site-header">
                     <div class="logo">
@@ -95,7 +208,7 @@
                                     </p>
                                     <h2>La forme interrogative</h2> <br>
                                     <p>A la forme interrogative, ce n'est pas plus compliqué. Il suffit d'INVERSER l'auxiliaire et le sujet <br>
-                                    <span class="marge"><i>ex : 'Will you go to the restaurant?' - Iras-tu au restaurant?
+                                    <span class="marge"><i>ex : 'Will you go to the restaurant?' - Iras-tu au restaurant?<br>
                                     <span class="marge">ex : 'Yes, I will '. / 'No, I won't.' - Oui./Non.</i></span> <br>
                                     WILL contient une idée de volonté ('je veux'), c'est pour cela que la question rituelle que pose le prêtre est 'Will you marry her? ' 'Yes, I will.' (Voulez-vous l'épouser? Oui, je le veux.) Pour faire une proposition, on utilisera SHALL avec WE : Shall we go to the disco tonight? Et si on allait en boîte ce soir ?</span><br></p>
 
@@ -113,65 +226,10 @@
                                 <div class="media">
                                   <div class="media-body">
                                     <h1 class="media-heading ruler-bottom">future simple lesson</h1>
-                                    <p><script type="text/javascript">
-                                    function controler(){
-                                      var reponses = new Array ("went", "wrote", "played", "spoke", "bought", "was", "saw", "drive", "brought", "worked", "left", "taught" );
-                                      var erreur1 = 0 ;
-                                      if (document.formulaire.a.value != reponses[0]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.b.value != reponses[1]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.c.value != reponses[2]){ 
-                                        erreur1 = erreur1 + 1 ;
-                                      }
-                                      if (document.formulaire.d.value != reponses[3]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.e.value != reponses[4]){ 
-                                        erreur1 = erreur1 + 1 ;
-                                       }
-                                      if (document.formulaire.f.value != reponses[5]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.g.value != reponses[6]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.h.value != reponses[7]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.i.value != reponses[8]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.j.value != reponses[9]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.k.value != reponses[10]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.l.value != reponses[11]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      
-                                      if (erreur1 == 0){
-                                        window.alert("Aucune erreur. BRAVO !") ;
-                                        return false ;
-                                      }
-                                      if (erreur1 >= 1){
-                                        window.alert("Il reste encore " + erreur1 + " erreurs à corriger. Courage !") ;
-                                        return false ;
-                                      }
-                                    }
-                                      </script> 
-
+                                    <p>
                                       <h3>Fill the gaps</h3>
                                       <br>
                                       <p> Conjuge right the verbs </p>
-                                       <!--<p class="listedesmots"><u>mots à utiliser :</u>
-                                       cette, amis, maison, ce, poissons, se, rivière,  car, aussi, pont
-                                      </p>-->
-                                      
                                       <form name="formulaire" action="URI" method="GET" onSubmit="return controler() ;">
                                       <p>
                                        1. I <input size="8" type="text" name="a"> (go) to Brighton last year. <br>
@@ -234,51 +292,7 @@
                                   <div class="media-body">
                                     <h1 class="media-heading ruler-bottom">future continuous exercice</h1>
                                    
-                                    <p><script type="text/javascript">
-                                    function controler1(){
-                                      var reponses = new Array ("will send", "will be sleeping", "will arrest", "will pick up", "will clap", "will rain", "will be speaking", "will subscribe", "will get", "will be attending" );
-                                      var erreur = 0 ;
-                                      if (document.formulaire1.a.value != reponses[0]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.b.value != reponses[1]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.c.value != reponses[2]){ 
-                                        erreur = erreur + 1 ;
-                                      }
-                                      if (document.formulaire1.d.value != reponses[3]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.e.value != reponses[4]){ 
-                                        erreur = erreur + 1 ;
-                                       }
-                                      if (document.formulaire1.f.value != reponses[5]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.g.value != reponses[6]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.h.value != reponses[7]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.i.value != reponses[8]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.j.value != reponses[9]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      
-                                      if (erreur == 0){
-                                        window.alert("Aucune erreur. BRAVO !") ;
-                                        return false ;
-                                      }
-                                      if (erreur >= 1){
-                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
-                                        return false ;
-                                      }
-                                    }
-                                      </script> 
+                                    <p>
 
                                       <h3>Fill the gaps</h3>
                                       <br>
@@ -308,26 +322,54 @@
                                       </table>
                                       </form>  
                                       </p>
-<!--
-1. She [Pas de réponse]  will send (send) Bruno the letter when she has time.
 
-2. I [Pas de réponse]  will be sleeping (sleep) at 11:30 p.m. this evening.
+                                  <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <p><b>Click <u>here</u> to get the correction</b></p>
+                                        <div class="contenuSpoiler">
+                                            <p>
+                                            1. She will send Bruno the letter when she has time.<br>
+                                            Elle enverra la lettre à Bruno quand elle aura le temps.<br>
+                                            <b>Explication : </b><br><br>
 
-3. The police officer [Pas de réponse]  will arrest (arrest) the thug after you identify him.
+                                            2. I will be sleeping at 11:30 p.m. this evening.<br>
+                                            Je vais dormir a 11h30 ce soir.<br>
+                                            <b>Explication : </b><br><br>
 
-4. The truck [Pas de réponse]  will pick up (pick up) the money later tomorrow afternoon.
+                                            3. The police officer will arrest the thug after you identify him.<br>
+                                            L'officier de police va arrêter le voyou après que tu l'aies identifié.<br>
+                                            <b>Explication : </b><br><br>
 
-5. When you graduate, your parents [Pas de réponse]  will clap (clap) in the audience.
+                                            4. The truck will pick up the money later tomorrow afternoon.<br>
+                                            Le camion viendra chercher l'argent demain après-midi. <br>
+                                            <b>Explication : </b><br><br>
 
-6. When you wake up tomorrow morning, it [Pas de réponse]  will rain (rain).
+                                            5. When you graduate, your parents will clap in the audience.<br>
+                                            Quand tu seras diplomé, tes parents t'applaudiront depuis l'auditoire.<br>
+                                            <b>Explication : </b>
 
-7. His boss [Pas de réponse]  will be speaking (speak) with him tomorrow at 1:00 p.m..
+                                            6. When you wake up tomorrow morning, it will rain.<br>
+                                            Quand tu te réveilleras demain matin, il pleuvra. <br>
+                                            <b>Explication : </b>
 
-8. I [Pas de réponse]  will subscribe (subscribe) to the magazine next month.
+                                            7. His boss will be speaking with him tomorrow at 1:00 p.m..<br>
+                                            Son chef parlera avec lui demain à 13h.<br>
+                                            <b>Explication : </b><br><br>
 
-9. They work hard. They [Pas de réponse]  will get (get) good marks at the end of the school.
+                                            8. I will subscribe to the magazine next month.<br>
+                                            Je m'abonnerai au magazine le mois prochain. <br>
+                                            <b>Explication : </b><br><br>
 
-10. Tomorrow at this time, I [Pas de réponse]  will be attending (attend) a conference.-->
+                                            9. They work hard. They will get good marks at the end of the school.<br>
+                                            Ils travaillent dur. Ils vont avoir de bonnes notes à la fin de leur scolarité. <br>
+                                            <b>Explication : </b><br><br>
+
+                                            10. Tomorrow at this time, I will be attending a conference.<br>
+                                            Demain à ce moment-même, j'assisterai à une conférence.<br>
+                                            <b>Explication : </b>
+
+                                            </p>
+                                        </div>
+                                      </div>
                                     
                                   </div>
                                 </div>

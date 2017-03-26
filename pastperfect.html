@@ -24,6 +24,125 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
+        <script type="text/javascript">
+        function ouvrirFermerSpoiler(div) {
+                var divContenu = div.getElementsByTagName('div')[0];
+                if(divContenu.style.display == 'none') {
+                    divContenu.style.display = 'block';
+                } else {
+                    divContenu.style.display = 'none';
+                }
+            }
+            function visibilite(thingId) { 
+              var targetElement; 
+              targetElement = document.getElementById(thingId) ; 
+              if (targetElement.style.display == "none") 
+              { 
+                targetElement.style.display = "" ; 
+              } else { 
+                targetElement.style.display = "none" ; 
+              } 
+            } 
+            
+        function controler1(){
+                                      var reponses = new Array ("had eaten", "went", "watched", "had finished", "found out", "had disappeared", "had never seen", "ended", "had eaten", "had had", "broke", "understood", "had read"  );
+                                      var erreur = 0 ;
+                                      if (document.formulaire1.a.value != reponses[0]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.aa.value != reponses[1]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.b.value != reponses[2]){ 
+                                        erreur = erreur + 1 ;
+                                      }
+                                      if (document.formulaire1.bb.value != reponses[3]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.c.value != reponses[4]){ 
+                                        erreur = erreur + 1 ;
+                                       }
+                                      if (document.formulaire1.cc.value != reponses[5]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.d.value != reponses[6]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.e.value != reponses[7]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.ee.value != reponses[8]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.f.value != reponses[9]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.ff.value != reponses[10]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.g.value != reponses[11]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire1.gg.value != reponses[12]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      
+                                      if (erreur == 0){
+                                        window.alert("Aucune erreur. BRAVO !") ;
+                                        return false ;
+                                      }
+                                      if (erreur >= 1){
+                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
+                                        return false ;
+                                      }
+                                    }
+                                    function controler(){
+                                      var reponses = new Array ("had left", "had been playing", "had finished", "had been driving", "had thrown", "had been swimming", "had met", "had gone", "had been raining", "had forgotten");
+                                      var erreur = 0 ;
+                                      if (document.formulaire.a.value != reponses[0]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.b.value != reponses[1]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.c.value != reponses[2]){ 
+                                        erreur = erreur + 1 ;
+                                      }
+                                      if (document.formulaire.d.value != reponses[3]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.e.value != reponses[4]){ 
+                                        erreur = erreur + 1 ;
+                                       }
+                                      if (document.formulaire.f.value != reponses[5]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.g.value != reponses[6]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.h.value != reponses[7]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.i.value != reponses[8]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      if (document.formulaire.j.value != reponses[9]){ 
+                                        erreur = erreur + 1 ; 
+                                      }
+                                      
+                                      
+                                      if (erreur == 0){
+                                        window.alert("Aucune erreur. BRAVO !") ;
+                                        return false ;
+                                      }
+                                      if (erreur >= 1){
+                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
+                                        return false ;
+                                      }
+                                    }
+                                      </script> 
+
+
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
             <div class="wrap-bg">
                 <div class="site-header">
@@ -145,76 +264,26 @@
                                 <div class="media">
                                   <div class="media-body">
                                     <h1 class="media-heading ruler-bottom">Past perfect exercice</h1>
-                                    <p><script type="text/javascript">
-                                    function controler1(){
-                                      var reponses = new Array ("had eaten", "went", "watched", "had finished", "found out", "had disappeared", "had never seen", "ended", "had eaten", "had had", "broke", "understood", "had read"  );
-                                      var erreur = 0 ;
-                                      if (document.formulaire1.a.value != reponses[0]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.aa.value != reponses[1]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.b.value != reponses[2]){ 
-                                        erreur = erreur + 1 ;
-                                      }
-                                      if (document.formulaire1.bb.value != reponses[3]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.c.value != reponses[4]){ 
-                                        erreur = erreur + 1 ;
-                                       }
-                                      if (document.formulaire1.cc.value != reponses[5]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.d.value != reponses[6]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.e.value != reponses[7]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.ee.value != reponses[8]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.f.value != reponses[9]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.ff.value != reponses[10]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.g.value != reponses[11]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.gg.value != reponses[12]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      
-                                      if (erreur == 0){
-                                        window.alert("Aucune erreur. BRAVO !") ;
-                                        return false ;
-                                      }
-                                      if (erreur >= 1){
-                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
-                                        return false ;
-                                      }
-                                    }
-                                      </script> 
+                                    <p>
 
                                       <h3>Fill the gaps</h3>
                                       <br>
-                                      <p> Conjuge right the verbs
-                                       <!--<p class="listedesmots"><u>mots à utiliser :</u>
-                                       cette, amis, maison, ce, poissons, se, rivière,  car, aussi, pont
-                                      </p>-->
+                                      <p> Conjugate the verbs in past perfect.
                                       
                                       <form name="formulaire1" action="URI" method="GET" onSubmit="return controler1() ;">
+                                      <p>
+                                      <a href="" onmouseover="javascript:visibilite('id_div_1'); return false;" onmouseout="javascript:visibilite('id_div_1'); return false;"><b>Help </b></a> 
+                                        <div id="id_div_1" style="display:none;"> 
+                                          <p> Past perfect : subject + had + past participle </p>
+                                        </div>
+                                      
                                       <p>
                                        1. After we  <input size="8" type="text" name="a"> (eat) at the cafeteria, we <input size="8" type="text" name="aa"> (go) to the zoo. <br>
                                        2. Pat <input size="8" type="text" name="b"> (watch) TV after she <input size="8" type="text" name="bb"> (finish) her homework. <br>
                                        3. When I arrived at the car park, I  <input size="8" type="text" name="c"> (find out) that my car <input size="8" type="text" name="cc">(disappear). <br>
                                        4. The children were amazed because they <input size="8" type="text" name="d"> (see/never) a bear before.<br>
                                        5. By the time the film <input size="8" type="text" name="e"> (end), Sonia <input size="8" type="text" name="ee"> (eat) a lot of popocorn.<br>
-                                       6. We <input size="8" type="text" name="f"> (have) the cra for ten years before it <input size="8" type="text" name="ff"> (break) down. <br>
+                                       6. We <input size="8" type="text" name="f"> (have) the car for ten years before it <input size="8" type="text" name="ff"> (break) down. <br>
                                        7. She <input size="8" type="text" name="g"> (understand) the film she saw yesterday because she <input size="8" type="text" name="gg"> (read) the book.
                                       </p>
                                       
@@ -225,37 +294,43 @@
                                       </table>
                                       </form>  
                                       </p>
-                                    <!--1. After we (eat) had eaten at the cafeteria,
+                                      <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <p><b>Click <u>here</u> to get the correction</b></p>
+                                        <div class="contenuSpoiler">
+                                            <p>
+                                            1. After we had eaten at the cafeteria, we went to the zoo.<br>
+                                            Après qu'on ait mangé à la cafeteria, on est allé au zoo.<br>
+                                            <b>Explication :</b>Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième.<br><br>
 
-we (go)Xwent to the zoo.
+                                            2. Pat watched TV after she had finished her homework.<br>
+                                            Pat regardait la TV après avoir fait ses devoirs. <br>
+                                            <b>Explication :</b>Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième.<br><br>
 
+                                            3. When I arrived at the car park, I found out that my car had disappeared.<br>
+                                            Quand je suis arrivé sur le parking, j'ai découvert que ma voiture avait disparue. <br>
+                                            <b>Explication :</b>Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième. <br><br>
 
-2. Pat (watch)Xwatched TV.
+                                            4.The children were amazed because they had never seen a bear before.<br>
+                                            Les enfants étaient emerveillés car ils n'avaient jamais vu un ours auparavant. <br>
+                                            <b>Explication :</b>Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième.<br><br>
 
-after she (finish)Xhad finished her homework.
+                                            5. By the time the film ended, Sonia had eaten a lot of popcorn.<br>
+                                            A la fin du film, Sonia avait mangé beaucoup de popcorn. <br>
+                                            <b>Explication :</b> Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième. <br><br>
 
+                                            6. We had had the car for ten years before it broke down.<br>
+                                            Nous avions la voiture depuis 10 ans avant qu'elle ne tombe en panne. <br>
+                                            <b>Explication :</b>Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième. <br><br>
 
-3. When I arrived at the car park, I (find out) Xfound out
+                                            7. She understood the film she saw yesterday because she had read the book.<br>
+                                            Elle a compris le film qu'elle a vu hier parce qu'elle avait lu le livre. <br>
+                                            <b>Explication :</b> Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième.
+                                            
 
-that my car (disappear)Xhad disappeared.
+                                            </p>
+                                        </div>
+                                      </div>
 
-
-4.The children were amazed because they (see/never)Xhad never seen a bear before.
-
-
-5. By the time the film (end) Xended,
-
-Sonia (eat) Xhad eaten a lot of popcorn.
-
-
-6. We (have)Xhad had the car for ten years
-
-before it (break) Xbroke down.
-
-
-7. She (understand) Xunderstood the film she saw yesterday
-
-because she (read) Xhad read the book.-->
                                    
                                   </div>
                                 </div>
@@ -269,15 +344,17 @@ because she (read) Xhad read the book.-->
                                     <span class="marge"></span><i>ex : I didn’t know what they had been talking about when I arrived. Je ne savais pas de quoi ils avaient été en train de parler quand je suis arrivé.</i> <br>
                                     <span class="marge"></span> <i>ex : I was sure he had been drinking. J’étais sûr qu’il avait bu.</i> <br> 
                                     <h2>Emplois </h2> <br> <p>
-                                    - Il y a la même différence entre le past perfect et le past perfect en BE + ING que entre le present perfect et le present perfect en BE + ING. (Voir aussi la leçon sur le present perfect continuous). <br>
-                                    - Le past perfect en BE + ING met l’accent sur l’activité qui était en cours ou qui venait tout juste de s’achever, alors que le past perfect simple met l’accent sur le résultat d’une activité qui était terminée. <br>
-                                    - Le past perfect simple (plus-que-parfait simple) est utilisé pour une action antérieure à une autre action passée. La forme progressive (past perfect continuous) est utilisée aussi pour une action antérieure à une autre action passée, mais on insiste sur sa grande durée.<br> <br>
+                                    <b> 1) Premier cas </b><br> 
+                                    <span class="marge"></span>Il y a la même différence entre le past perfect et le past perfect en BE + ING que entre le present perfect et le present perfect en BE + ING. (Voir aussi la leçon sur le present perfect continuous). <br>
+                                    <b> 2) Deuxième cas </b><br>
+                                    <span class="marge"></span>Le past perfect en BE + ING met l’accent sur l’activité qui était en cours ou qui venait tout juste de s’achever, alors que le past perfect simple met l’accent sur le résultat d’une activité qui était terminée. <br>
+                                    <b> 3) Troisième cas </b><br> 
+                                    <span class="marge"></span>Le past perfect simple (plus-que-parfait simple) est utilisé pour une action antérieure à une autre action passée. La forme progressive (past perfect continuous) est utilisée aussi pour une action antérieure à une autre action passée, mais on insiste sur sa grande durée.<br> <br>
 
                                     Voici un exemple pour illustrer la différence : <br>
                                     <span class="marge"></span><i> ex : Georges had eaten all the food. (Past perfect simple).</i> <br>
                                     <span class="marge"></span><i> ex : Georges had been eating for 1 hour. (Past perfect progressif). </i><br>
-                                    <span class="marge"></span>Dans la deuxième phrase, on veut surtout dire que Georges a mangé pendant une certaine durée (1 heure) tandis que dans la première, on veut surtout insister sur le résultat de l’action, le constat dans le présent de l’action de George : Il a tout mangé et il ne reste plus rien. <br><
-                                    
+                                    <span class="marge"></span>Dans la deuxième phrase, on veut surtout dire que Georges a mangé pendant une certaine durée (1 heure) tandis que dans la première, on veut surtout insister sur le résultat de l’action, le constat dans le présent de l’action de George : Il a tout mangé et il ne reste plus rien. <br>
                                     
                                     </p>
                                     
@@ -287,65 +364,19 @@ because she (read) Xhad read the book.-->
 
                         <div class="tab-pane fade" id="pce">
                                 <div class="media">
-                                  <!--<img src="img/img1.jpg" class="spacing-r" alt="">-->
                                   <div class="media-body">
                                     <h1 class="media-heading ruler-bottom">Past perfect continuous exercice</h1>
                                     <p>
-                                    <script type="text/javascript">
-                                    function controler(){
-                                      var reponses = new Array ("had left", "had been playing", "had finished", "had been driving", "had thrown", "had been swimming", "had met", "had gone", "had been raining", "had forgotten");
-                                      var erreur = 0 ;
-                                      if (document.formulaire.a.value != reponses[0]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.b.value != reponses[1]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.c.value != reponses[2]){ 
-                                        erreur = erreur + 1 ;
-                                      }
-                                      if (document.formulaire.d.value != reponses[3]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.e.value != reponses[4]){ 
-                                        erreur = erreur + 1 ;
-                                       }
-                                      if (document.formulaire.f.value != reponses[5]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.g.value != reponses[6]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.h.value != reponses[7]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.i.value != reponses[8]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.j.value != reponses[9]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      
-                                      
-                                      if (erreur == 0){
-                                        window.alert("Aucune erreur. BRAVO !") ;
-                                        return false ;
-                                      }
-                                      if (erreur >= 1){
-                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
-                                        return false ;
-                                      }
-                                    }
-                                      </script> 
-
+                                    
                                       <h3>Fill the gaps</h3>
                                       <br>
-                                      <p> Conjuge right the verbs
-                                       <!--<p class="listedesmots"><u>mots à utiliser :</u>
-                                       cette, amis, maison, ce, poissons, se, rivière,  car, aussi, pont
-                                      </p>-->
-                                      
+                                      <p> Conjugate the verbs in past perfect or past perfect continuous.
                                       <form name="formulaire" action="URI" method="GET" onSubmit="return controler() ;">
+                                      <p>
+                                      <a href="" onmouseover="javascript:visibilite('id_div_2'); return false;" onmouseout="javascript:visibilite('id_div_2'); return false;"><b>Help </b></a> 
+                                        <div id="id_div_2" style="display:none;"> 
+                                          <p> Past perfect : subject + had + past participle <br> Past perfect continuous : HAD + BEEN + Verbe en ING. </p>
+                                        </div>
                                       <p>
                                        1. When I arrived at the station the train <input size="8" type="text" name="a"> (leave). <br>
                                        2. He <input size="8" type="text" name="b"> (play) tennis for 4 hours when he broke his leg.<br>
@@ -367,27 +398,53 @@ because she (read) Xhad read the book.-->
                                       </form>  
                                       </p>
 
+                                    <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <p><b>Click <u>here</u> to get the correction</b></p>
+                                        <div class="contenuSpoiler">
+                                            <p>
+                                            1. When I arrived at the station the train had left.<br>
+                                            Quand je suis arrivé à la gare le train était parti.<br>
+                                            <b>Explication :</b>Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième. <br><br>
 
-                            <!--1. When I arrived at the station the train [Pas de réponse]  had left (leave).
+                                            2. He had been playing tennis for 4 hours when he broke his leg.<br>
+                                            Ils jouaient au tennis depuis 4 heures quand il s'est cassé la jambe.<br>
+                                            <b>Explication :</b>La forme progressive (past perfect continuous) est utilisée aussi pour une action antérieure à une autre action passée, mais on insiste sur sa grande durée.<br><br>
 
-2. He [Pas de réponse]  had been playing (play) tennis for 4 hours when he broke his leg.
+                                            3. The dog came into the house once she had finished the housework.<br>
+                                            Le chien est rentré dans la maison une fois qu'elle avait terminé le ménage.<br>
+                                            <b>Explication :</b>Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième. <br><br>
 
-3. The dog came into the house once she [Pas de réponse]  had finished (finish) the housework.
+                                            4. He had been driving his car for 10 minutes when he realized it had a flat tyre.<br>
+                                            Il conduisait sa voiture depuis 10 minutes quand il s'est rendu compte qu'il avait un pneu crevé.<br>
+                                            <b>Explication :</b>La forme progressive (past perfect continuous) est utilisée aussi pour une action antérieure à une autre action passée, mais on insiste sur sa grande durée.<br><br>
 
-4. He [Pas de réponse]  had been driving (drive) his car for 10 minutes when he realized it had a flat tyre.
+                                            5. She had thrown the letter away when she noticed it was important.<br>
+                                            Elle avait jeté la lettre quand elle a remarqué que c'était important. <br>
+                                            <b>Explication :</b>Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième.<br><br>
 
-5. She [Pas de réponse]  had thrown (throw) the letter away when she noticed it was important.
+                                            6. He had been swimming for 15 minutes when he understood he had lost his swimsuit.
+                                            Elle nagait depuis 15 minutes quand elle a compris qu'elle avait perdu son maillot de bain. <br>
+                                            <b>Explication :</b>La forme progressive (past perfect continuous) est utilisée aussi pour une action antérieure à une autre action passée, mais on insiste sur sa grande durée.<br><br>
 
-6. He [Pas de réponse]  had been swimming (swim) for 15 minutes when he understood he had lost his swimsuit.
+                                            7. When he saw her he knew he had met her before.<br>
+                                            Quand il l'a vue, il savait qu'il l'avait déjà rencontrée. <br>
+                                            <b>Explication :</b> Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième.<br><br>
 
-7. When he saw her he knew he [Pas de réponse]  had met (meet) her before.
+                                            8. When he phoned her she had gone out.<br>
+                                            Quand il lui a téléphoné, elle était sortie. <br>
+                                            <b>Explication :</b>Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième.<br><br>
 
-8. When he phoned her she [Pas de réponse]  had gone (go) out.
+                                            9. It had been raining for one hour when the wind started to blow.<br>
+                                            Il pleuvait depuis 1 heure quand le vent a commencé a soufflé. <br>
+                                            <b>Explication :</b>La forme progressive (past perfect continuous) est utilisée aussi pour une action antérieure à une autre action passée, mais on insiste sur sa grande durée.<br><br>
 
-9. It [Pas de réponse]  had been raining (rain) for one hour when the wind started to blow.
+                                            10. He rushed to the baker's when he saw his wife had forgotten to buy some bread.<br>
+                                            Il se precipita chez le boulanger quand il a vu que sa femme avait oublié d'acheter du pain.<br>
+                                            <b>Explication :</b> Lorsque deux actions ont eu lieu dans le passé à des moments différents on emploie le past perfect pour exprimer la première action et le past pour la deuxième.
 
-10. He rushed to the baker's when he saw his wife [Pas de réponse]  had forgotten (forget) to buy some bread.
-                                    -->
+                                            </p>
+                                        </div>
+                                      </div>
                                     
                                   </div>
                                 </div>

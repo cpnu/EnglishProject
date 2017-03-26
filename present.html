@@ -25,6 +25,130 @@
         <![endif]-->
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+        <script type="text/javascript"> 
+
+          function ouvrirFermerSpoiler(div) {
+                var divContenu = div.getElementsByTagName('div')[0];
+                if(divContenu.style.display == 'none') {
+                    divContenu.style.display = 'block';
+                } else {
+                    divContenu.style.display = 'none';
+                }
+            }
+          
+          function controler1(){
+            var reponses = new Array ("is playing", "play", "don't like", "hates", "is doing", "are you watching", "go", "take", "don't travel", "isn't coming" );
+            var erreur = 0 ;
+            if (document.formulaire1.a.value != reponses[0]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire1.b.value != reponses[1]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire1.c.value != reponses[2]){ 
+              erreur = erreur + 1 ;
+            }
+            if (document.formulaire1.d.value != reponses[3]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire1.e.value != reponses[4]){ 
+              erreur = erreur + 1 ;
+             }
+            if (document.formulaire1.f.value != reponses[5]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire1.g.value != reponses[6]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire1.h.value != reponses[7]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire1.i.value != reponses[8]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire1.j.value != reponses[9]){ 
+              erreur = erreur + 1 ; 
+            }
+            
+            if (erreur == 0){
+              window.alert("Aucune erreur. BRAVO !") ;
+              return false ;
+            }
+            if (erreur >= 1){
+              window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
+              return false ;
+            }
+          }
+          function visibilite(thingId) { 
+              var targetElement; 
+              targetElement = document.getElementById(thingId) ; 
+              if (targetElement.style.display == "none") 
+              { 
+                targetElement.style.display = "" ; 
+              } else { 
+                targetElement.style.display = "none" ; 
+              } 
+            } 
+          function controler(){
+            var reponses = new Array ("is raining", "am getting", "is reading", "is going", "is visiting", "is swimming", "is waiting", "are moving", "is raining ", "are repairing" );
+            var erreur = 0 ;
+            
+            if (document.formulaire.a.value != reponses[0]){ 
+              erreur = erreur + 1 ; 
+             
+            }
+            if (document.formulaire.b.value != reponses[1]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire.c.value != reponses[2]){ 
+              erreur = erreur + 1 ;
+            }
+            if (document.formulaire.d.value != reponses[3]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire.e.value != reponses[4]){ 
+              erreur = erreur + 1 ;
+             }
+            if (document.formulaire.f.value != reponses[5]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire.g.value != reponses[6]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire.h.value != reponses[7]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire.i.value != reponses[8]){ 
+              erreur = erreur + 1 ; 
+            }
+            if (document.formulaire.j.value != reponses[9]){ 
+              erreur = erreur + 1 ; 
+            }
+
+            /*function controler12(){
+              var erreur1=0;
+            var reponses = new Array ("is raining", "am getting", "is reading", "is going", "is visiting", "is swimming", "is waiting", "are moving", "is raining ", "is repairing" );
+            
+            if (document.formulaire.a.value != reponses[0]){ 
+               
+              erreur1=erreur1+1;
+            }
+            
+            return erreur1;
+          }
+          var show = controler12();*/
+            
+            if (erreur == 0){
+              window.alert("Aucune erreur. BRAVO !") ;
+              return false ;
+            }
+            if (erreur >= 1){
+              window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
+              return false ;
+            }
+                                           
+          }
+            </script> 
             <div class="wrap-bg">
                 <div class="site-header">
                     <div class="logo">
@@ -104,8 +228,8 @@
                                       </tr>
                                       <tr>
                                           <th align="center"><p>Forme affirmative </p></th>
-                                          <td align="center"><p> AUXILIAIRE BE au présent + verbe en -ING <br> ex: I am playing, you are playing, he/she/it is playing, we are playing, you are playing, they are playing</p></td>
-                                          <td align="center" ><p>BASE VERBALE à toutes les formes, sauf à la 3e personne du singulier (he/she/it) où il faut ajouter un -s <br> ex: I play, you play, he/she/it plays, we play, you play, they play</p></td>
+                                          <td align="center"><p> AUXILIAIRE BE au présent + verbe en -ING <br> <i>ex: I am playing, you are playing, he/she/it is playing, we are playing, you are playing, they are playing</i></p></td>
+                                          <td align="center" ><p>BASE VERBALE à toutes les formes, sauf à la 3e personne du singulier (he/she/it) où il faut ajouter un -s <br> <i>ex: I play, you play, he/she/it plays, we play, you play, they play</i></p></td>
                                       </tr>
                                       <tr>
                                           <th align="center"><p>Exceptions</p></th>
@@ -114,19 +238,19 @@
                                       </tr>
                                       <tr>
                                           <th align="center"><p>Forme négative</p></th>
-                                          <td align="center"><p>Utiliser NOT à toutes les formes <br> ex: I am not playing</p></td>
-                                          <td align="center"><p>Utiliser DO NOT ou DON'T à toutes les formes, sauf à la 3e personne du singulier (utilisez DOES NOT = DOESN'T) <br> ex: I don't play, she doesn't play</p></td>
+                                          <td align="center"><p>Utiliser NOT à toutes les formes <br><i> ex: I am not playing</i></p></td>
+                                          <td align="center"><p>Utiliser DO NOT ou DON'T à toutes les formes, sauf à la 3e personne du singulier (utilisez DOES NOT = DOESN'T) <br> <i>ex: I don't play, she doesn't play</i></p></td>
                                       </tr>
 
                                       <tr>
                                           <th align="center"><p>Forme interrogative</p></th>
-                                          <td align="center"><p>Faire l'inversion de BE <br> ex: Are you playing football?</p></td>
-                                          <td align="center"><p>Faire l'inversion de DO ou DOES (3e personne du singulier) <br> ex: Do you play football? Does he play football? </p></td>
+                                          <td align="center"><p>Faire l'inversion de BE <br> <i>ex: Are you playing football?</i></p></td>
+                                          <td align="center"><p>Faire l'inversion de DO ou DOES (3e personne du singulier) <br><i> ex: Do you play football? Does he play football? </i></p></td>
                                       </tr>
                                       <tr>
                                           <th align="center"><p>Réponses courtes</p></th>
-                                          <td align="center"><p>Utiliser BE <br> ex: Yes, I am. No, he isn't.</p></td>
-                                          <td align="center"><p>Utiliser DO ou DOES <br> ex: Yes, I do. No, he doesn't.</p></td>
+                                          <td align="center"><p>Utiliser BE <br> <i>ex: Yes, I am. No, he isn't.</i></p></td>
+                                          <td align="center"><p>Utiliser DO ou DOES <br> <i>ex: Yes, I do. No, he doesn't.</i></p></td>
                                       </tr>
                                       </table>
 
@@ -153,60 +277,19 @@
                                 <div class="media">
                                   <div class="media-body">
                                     <h1 class="media-heading ruler-bottom">Present simple exercice</h1>
-                                    <p><script type="text/javascript">
-                                    function controler1(){
-                                      var reponses = new Array ("is playing", "play", "don't like", "hates", "is doing", "are you watching", "go", "take", "don't travel", "isn't coming" );
-                                      var erreur = 0 ;
-                                      if (document.formulaire1.a.value != reponses[0]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.b.value != reponses[1]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.c.value != reponses[2]){ 
-                                        erreur = erreur + 1 ;
-                                      }
-                                      if (document.formulaire1.d.value != reponses[3]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.e.value != reponses[4]){ 
-                                        erreur = erreur + 1 ;
-                                       }
-                                      if (document.formulaire1.f.value != reponses[5]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.g.value != reponses[6]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.h.value != reponses[7]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.i.value != reponses[8]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.j.value != reponses[9]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      
-                                      if (erreur == 0){
-                                        window.alert("Aucune erreur. BRAVO !") ;
-                                        return false ;
-                                      }
-                                      if (erreur >= 1){
-                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
-                                        return false ;
-                                      }
-                                    }
-                                      </script> 
+                                    <p>
 
                                       <h3>Fill the gaps</h3>
                                       <br>
-                                      <p> Chose the rigth form between simple present and present continuous
-                                       <!--<p class="listedesmots"><u>mots à utiliser :</u>
-                                       cette, amis, maison, ce, poissons, se, rivière,  car, aussi, pont
-                                      </p>-->
+                                      <p> Chose the rigth form between simple present and present continuous for the verbs in brackets.
                                       
                                       <form name="formulaire1" action="URI" method="GET" onSubmit="return controler1() ;">
+                                      <p>
+                                        <img src="point_interro.png" alt = "point interro" width="20" align="left"/>
+                                        <a href="" onmouseover="javascript:visibilite('id_div_1'); return false;" onmouseout="javascript:visibilite('id_div_1'); return false;"><b>Help </b></a> 
+                                        <div id="id_div_1" style="display:none;"> 
+                                          <p> Present continuous : action au moment où l'on parle <br> Present simple : actions habituelles, vérités, sentiments </p>
+                                        </div>
                                       <p>
                                        1. Listen! Sandra <input size="8" type="text" name="a"> (play) music! <br>
                                        2. On Sundays, I always <input size="8" type="text" name="b"> (play) football with my friends. <br>
@@ -227,64 +310,73 @@
                                       </table>
                                       </form>  
                                       </p>
-                                   <!-- plays  is playing 
-Ecoute ! Sandra joue de la musique !
+                                   
+                                  <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <p><b>Click <u>here</u> to get the correction</b></p>
+                                        <div class="contenuSpoiler">
+                                            <p>
+                                            1. Listen ! Sandra is playing music ! <br>
+                                            Ecoute ! Sandra joue de la musique ! <br>
 
-Explications : Le verbe "Listen !" indique que l'action a lieu en ce moment (présent en BE + -ING).
-
-
-2.  [Pas de réponse]  play 
-Les dimanches, je joue toujours au football avec mes amis.
-
-Explications : Habitude : tous les dimanches (présent simple).
-
-
-3. I [Pas de réponse]  don't like (not/like) carrots.
-Je n'aime pas les carottes.
-
-Explications : Préférence / goûts (présent simple)
+                                            <b>Explications :</b> Le verbe "Listen !" indique que l'action a lieu en ce moment (présent en BE + -ING). <br><br>
 
 
-4. She [Pas de réponse]  hates (hate) westerns.
-Elle déteste les westerns.
+                                            2. On Sundays, I always play football with my friends. <br>
+                                            Les dimanches, je joue toujours au football avec mes amis. <br>
 
-Explications : Préférence / goûts (présent simple)
-
-
-5. Can you help Peter? He [Pas de réponse]  is doing (do) his homework.
-Est-ce que tu peux aider Peter ? Il fait ses devoirs.
-
-Explications : La demande d'aide implique du présent en BE + -ING car l'action a lieu en ce moment.
+                                            <b>Explications :</b>  Habitude : tous les dimanches (présent simple).<br>
 
 
-6. What [Pas de réponse]  are you watching (you/watch) on TV? Is it interesting?
-Que regardes-tu à la télé ? Est-ce intéressant ?
+                                            3. I don't like carrots.<br>
+                                            Je n'aime pas les carottes.<br>
 
-Explications : Action en cours (présent en BE + -ING)
-
-
-7. When I [Pas de réponse]  go (go) back home, I will phone my girlfriend.
-Quand je serai de retour à la maison, je téléphonerai à ma petite amie.
-
-Explications : Pas de futur dans une proposition subordonnée de temps (When...)
+                                            <b>Explications :</b>  Préférence / goûts (présent simple)<br><br>
 
 
-8. We usually [Pas de réponse]  take (take) a taxi to go to work.
-Nous prenons habituellement un taxi pour aller au travail.
+                                            4. She hates westerns.<br>
+                                            Elle déteste les westerns.<br>
 
-Explications : Habitude ("usually"): présent simple
-
-
-9. They [Pas de réponse]  don't travel (not/travel) a lot.
-Ils ne voyagent pas beaucoup.
-
-Explications : Ils n'ont pas l'habitude de beaucoup voyager (présent simple).
+                                            <b>Explications :</b>  Préférence / goûts (présent simple)<br><br>
 
 
-10. She [Pas de réponse]  isn't coming (not/come). She is looking after her little sister.
-Elle ne vient pas. Elle s'occupe de sa petite soeur.
+                                            5. Can you help Peter? He is doing his homework.<br>
+                                            Est-ce que tu peux aider Peter ? Il fait ses devoirs.<br>
 
-Explications : Elle ne peut pas venir car en ce moment, elle s'occupe de sa soeur. (présent en BE + -ING)-->
+                                            <b>Explications :</b>  La demande d'aide implique du présent en BE + -ING car l'action a lieu en ce moment.<br><br>
+
+
+                                            6. What are you watching on TV? Is it interesting?<br>
+                                            Que regardes-tu à la télé ? Est-ce intéressant ?<br>
+
+                                            <b>Explications :</b>  Action en cours (présent en BE + -ING)<br><br>
+
+
+                                            7. When I go back home, I will phone my girlfriend.<br>
+                                            Quand je serai de retour à la maison, je téléphonerai à ma petite amie.<br>
+
+                                            <b>Explications :</b>  Pas de futur dans une proposition subordonnée de temps (When...)<br><br>
+
+
+                                            8. We usually take a taxi to go to work.<br>
+                                            Nous prenons habituellement un taxi pour aller au travail.<br>
+
+                                            <b>Explications :</b>  Habitude ("usually"): présent simple<br><br>
+
+
+                                            9. They don't travel a lot.<br>
+                                            Ils ne voyagent pas beaucoup.<br>
+
+                                            <b>Explications :</b>  Ils n'ont pas l'habitude de beaucoup voyager (présent simple).<br><br>
+
+
+                                            10. She isn't coming. She is looking after her little sister.<br>
+                                            Elle ne vient pas. Elle s'occupe de sa petite soeur.<br>
+
+                                            <b>Explications :</b>  Elle ne peut pas venir car en ce moment, elle s'occupe de sa soeur. (présent en BE + -ING)
+
+                                            </p>
+                                        </div>
+                                      </div>
                                   </div>
                                 </div>
                         </div>
@@ -331,94 +423,31 @@ Explications : Elle ne peut pas venir car en ce moment, elle s'occupe de sa soeu
 
                         <div class="tab-pane fade" id="pce">
                                 <div class="media">
-                                  <!--<img src="img/img1.jpg" class="spacing-r" alt="">-->
                                   <div class="media-body">
                                     <h1 class="media-heading ruler-bottom">Present continuous exercice</h1>
                                     
                                     <p>
-                                    <script type="text/javascript"> 
-                                      function visibilite(thingId) 
-                                      { 
-                                        var targetElement; 
-                                        targetElement = document.getElementById(thingId) ; 
-                                        if (targetElement.style.display == "none") 
-                                        { 
-                                          targetElement.style.display = "" ; 
-                                        } else { 
-                                          targetElement.style.display = "none" ; 
-                                        } 
-                                      } 
-                                    </script> 
-                                    <script type="text/javascript">
-                                    function controler(){
-                                      var reponses = new Array ("is raining", "am getting", "is reading", "is going", "is visiting", "is swimming", "is waiting", "are moving", "is raining ", "is repairing" );
-                                      var erreur = 0 ;
-                                      if (document.formulaire.a.value != reponses[0]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.b.value != reponses[1]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.c.value != reponses[2]){ 
-                                        erreur = erreur + 1 ;
-                                      }
-                                      if (document.formulaire.d.value != reponses[3]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.e.value != reponses[4]){ 
-                                        erreur = erreur + 1 ;
-                                       }
-                                      if (document.formulaire.f.value != reponses[5]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.g.value != reponses[6]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.h.value != reponses[7]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.i.value != reponses[8]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.j.value != reponses[9]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      
-                                      if (erreur == 0){
-                                        window.alert("Aucune erreur. BRAVO !") ;
-                                        return false ;
-                                      }
-                                      if (erreur >= 1){
-                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
-                                        var button = document.createElement("input" ) ;
-                                        button.type = "button" ;
-                                        button.setAttribute("onClick","choixlettre") ;
-        
-                                        return false ;
-                                      }
-                                    }
-                                      </script> 
+                                    
 
                                       <h3>Fill the gaps</h3>
                                       <br>
                                       <p> Conjuge the verbs in present continuous
-                                       <!--<p class="listedesmots"><u>mots à utiliser :</u>
-                                       cette, amis, maison, ce, poissons, se, rivière,  car, aussi, pont
-                                      </p>-->
-                                      
+                                      </p>
+
                                       <form name="formulaire" action="URI" method="GET" onSubmit="return controler() ;">
-                                      <p>
-                                       1. It <input size="8" type="text" name="a"> (rain) heavily. 
-                                      <a href="" onmouseover="javascript:visibilite('id_div_1'); return false;" onmouseout="javascript:visibilite('id_div_1'); return false;">Aide</a> 
-                                      <div id="id_div_1" style="display:none;"> 
-                                        Texte à masquer, afficher 
-                                        </div> 
-                                        <br>
-                                       2. I <input size="8" type="text" name="b"> (get) up late. <br>
+                                       <p>
+                                        <img src="point_interro.png" alt = "point interro" width="20" align="left"/>
+                                        <a href="" onmouseover="javascript:visibilite('id_div_2'); return false;" onmouseout="javascript:visibilite('id_div_2'); return false;"><b>Help </b></a> 
+                                        <div id="id_div_2" style="display:none;"> 
+                                          <p> Be au présent + base verbale + ing </p>
+                                        </div>
+                                        <p>
+                                       1. It <input size="8" type="text" name="a"> (rain) heavily.<br> 
+                                       2. I <input size="8" type="text" name="b"> (get) up late.<br>
                                        3. He <input size="8" type="text" name="c"> (read) in bed. <br>
                                        4. She <input size="8" type="text" name="d"> (go) to school on foot. <br>
-                                       5. He <input size="8" type="text" name="e">  (visit) Algeria. <br>
-                                       6. She <input size="8" type="text" name="f"> (swim) well.<br>
+                                       5. Currently, he <input size="8" type="text" name="e">  (visit) Algeria. <br>
+                                       6. Look ! She <input size="8" type="text" name="f"> (swim) well.<br>
                                        7. What are you doing ? Can't you see I <input size="8" type="text" name="g"> (wait) for you !<br>
                                        8. We <input size="8" type="text" name="h"> (move) in September.<br>
                                        9. Look, it <input size="8" type="text" name="i"> (rain).<br>
@@ -427,66 +456,67 @@ Explications : Elle ne peut pas venir car en ce moment, elle s'occupe de sa soeu
                                       
                                       <p class="rep">
                                         <input type="reset" name="effacer" value="Reset">
-                                        <input type="submit" name="envoyer" value="Submit">  
+                                        <input type="submit" name="envoyer" value="Submit">
+                                        
                                       <p>
+                                       
+<!--
                                         <a href="" onmouseover="javascript:visibilite('id_div_2'); return false;" onmouseout="javascript:visibilite('id_div_2'); return false;">Answers</a> 
-                                        <div id="id_div_2" style="display:none;"> <p>
-                                        1. It [Pas de réponse]  is raining (rains) heavily. <br>
-
-2. I am getting up late.<br>
-
-3. He is reading in bed.<br>
-
-4. She is going to school on foot.<br>
-
-5. He is visiting Algeria.<br>
-
-6. He is selling his old book.<br>
-
-7. He is playing in Real Madrid.<br>
-
-8. They are repairing the car.<br>
-
-9. He is working in France.<br>
-
-10. She [Pas de réponse]  is swimming (swims) well.<br>
-
-11. The teacher [Pas de réponse]  is explaining (explains) the lesson.<br>
-
-12. What are you doing ? Can't you see I [Pas de réponse]  am waiting (wait) for you !<br>
-
-13. They [Pas de réponse]  are leaving (leave) for Paris in August.<br>
-
-14. We [Pas de réponse]  are moving (move) in September.<br>
-
-15. Look, it [Pas de réponse]  is raining (rains). </p>
+                                        <div id="id_div_2" style="display:none;"> 
+                                        <p>
+                                        1</p>
                                         </div> 
-                                      <!--
-                                      <script type="text/javascript">
-                                      function ouvrirFermerSpoiler(div) {
-                                          var divContenu = div.getElementsByTagName('div')[0];
-                                          if(divContenu.style.display == 'none') {
-                                              divContenu.style.display = 'block';
-                                          } else {
-                                              divContenu.style.display = 'none';
-                                          }
-                                      }
-                                      </script>
-                                      
-                                      <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
-                                        <div class="contenuSpoiler">
-                                            Texte caché
-                                        </div>
-                                      </div>
                                       -->
+                                      
                                       </script>
                                       </table>
                                       </form> 
-
-
-
-                                    
                                     </p>
+                                    <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <p><b>Click <u>here</u> to get the correction</b></p>
+                                        <div class="contenuSpoiler">
+                                            <p>1. It is raining heavily. <br>
+                                            Il pleut beaucoup. <br>
+                                            <b>Explication : </b> be + base verbale + ing.<br><br>
+
+                                            2. I am getting up late.<br>
+                                            Je me lève tard.<br>
+                                            <b>Explication :</b> Les verbes d'une syllabe contenant une voyelle et terminés par une seule consonne doublent la consonne devant le 'ING', on double donc le T.<br><br>
+
+                                            3. He is reading in bed.<br>
+                                            Il est en train de lire dans son lit. <br>
+                                            <b>Explication : </b> be + base verbale + ing.<br><br>
+
+                                            4. She is going to school on foot.<br>
+                                            Elle va à l'école à pieds <br>
+                                            <b>Explication : </b> be + base verbale + ing.<br><br>
+
+                                            5. Currently, he is visiting Algeria.<br>
+                                            Il est en train de visiter l'Algérie. <br>
+                                            <b>Explication : </b> be + base verbale + ing.<br><br>
+
+                                            6. Look ! She is swimming well.<br>
+                                            Regarde ! Elle nage bien ! <br>
+                                            <b>Explication :</b> Les verbes d'une syllabe contenant une voyelle et terminés par une seule consonne doublent la consonne devant le 'ING', on double donc le M.<br><br>
+
+                                            7. What are you doing ? Can't you see I am waiting for you !<br>
+                                            Qu'est ce que tu es en train de faire ? Tu ne vois pas que je t'attends ? <br>
+                                            <b>Explication : </b> be + base verbale + ing.<br><br>
+
+                                            8. We are moving in September.<br>
+                                            Nous déménageons en Septembre. <br>
+                                            <b>Explication : </b> be + base verbale + ing.<br><br>
+
+                                            9. Look, it is raining.<br>
+                                            Regarde, il pleut. <br>
+                                            <b>Explication : </b> be + base verbale + ing.<br><br>
+
+                                            10. They are repairing the car.<br>
+                                            Ils reparent la voiture. <br>
+                                            <b>Explication : </b> be + base verbale + ing.
+                                        </p>
+                                        </div>
+                                      </div>
                                     
                                   </div>
                                 </div>

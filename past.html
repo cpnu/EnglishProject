@@ -20,6 +20,118 @@
         <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
+      <script type="text/javascript"> 
+      function visibilite(thingId){
+        var targetElement; 
+        targetElement = document.getElementById(thingId) ; 
+        if (targetElement.style.display == "none") { 
+          targetElement.style.display = "" ; 
+        } else { 
+          targetElement.style.display = "none" ; 
+        } 
+      } 
+
+      function ouvrirFermerSpoiler(div) {
+        var divContenu = div.getElementsByTagName('div')[0];
+        if(divContenu.style.display == 'none') {
+          divContenu.style.display = 'block';
+        } else {
+          divContenu.style.display = 'none';
+        }
+      }
+
+      function controler1(){
+        var reponses = new Array ("went", "wrote", "played", "spoke", "bought", "was", "saw", "drive", "brought", "worked", "left", "taught" );
+        var erreur = 0 ;
+        if (document.formulaire1.a.value != reponses[0]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire1.b.value != reponses[1]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire1.c.value != reponses[2]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire1.d.value != reponses[3]){ 
+          erreur = erreur + 1 ;
+        }
+        if (document.formulaire1.e.value != reponses[4]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire1.f.value != reponses[5]){ 
+          erreur = erreur + 1 ;  
+        }
+        if (document.formulaire1.g.value != reponses[6]){ 
+          erreur = erreur + 1 ;
+        }
+        if (document.formulaire1.h.value != reponses[7]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire1.i.value != reponses[8]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire1.j.value != reponses[9]){ 
+          erreur = erreur + 1 ;  
+        }
+        if (document.formulaire1.k.value != reponses[10]){ 
+          erreur = erreur + 1 ;  
+        }
+        if (document.formulaire1.l.value != reponses[11]){ 
+          erreur = erreur + 1 ;  
+        }
+        if (erreur == 0){
+          window.alert("Aucune erreur. BRAVO !") ;
+          return false ;
+        }
+        if (erreur >= 1){
+          window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
+          return false ;
+        }
+      }
+
+      function controler(){
+        var reponses = new Array ("was having", "phoned", "wanted", "was trying", "was explaining", "did not see", "were you doing", "was not watching", "were you not watching", "wanted" );
+        var erreur = 0 ;
+        if (document.formulaire.a.value != reponses[0]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire.b.value != reponses[1]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire.c.value != reponses[2]){ 
+          erreur = erreur + 1 ;
+        }
+        if (document.formulaire.d.value != reponses[3]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire.e.value != reponses[4]){ 
+          erreur = erreur + 1 ;
+        }
+        if (document.formulaire.f.value != reponses[5]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire.g.value != reponses[6]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire.h.value != reponses[7]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire.i.value != reponses[8]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (document.formulaire.j.value != reponses[9]){ 
+          erreur = erreur + 1 ; 
+        }
+        if (erreur == 0){
+          window.alert("Aucune erreur. BRAVO !") ;
+          return false ;
+        }
+        if (erreur >= 1){
+          window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
+          return false ;
+        }
+      }
+      </script>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -117,66 +229,18 @@
                                 <div class="media">
                                   <div class="media-body">
                                     <h1 class="media-heading ruler-bottom">past simple exercice</h1> <p>
-                                    <script type="text/javascript">
-                                    function controler1(){
-                                      var reponses = new Array ("went", "wrote", "played", "spoke", "bought", "was", "saw", "drive", "brought", "worked", "left", "taught" );
-                                      var erreur = 0 ;
-                                      if (document.formulaire1.a.value != reponses[0]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.b.value != reponses[1]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.c.value != reponses[2]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.d.value != reponses[3]){ 
-                                        erreur = erreur + 1 ;  
-                                      }
-                                      if (document.formulaire1.e.value != reponses[4]){ 
-                                        erreur = erreur + 1 ; 
-                                       }
-                                      if (document.formulaire1.f.value != reponses[5]){ 
-                                        erreur = erreur + 1 ;  
-                                      }
-                                      if (document.formulaire1.g.value != reponses[6]){ 
-                                        erreur = erreur + 1 ;  
-                                      }
-                                      if (document.formulaire1.h.value != reponses[7]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.i.value != reponses[8]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire1.j.value != reponses[9]){ 
-                                        erreur = erreur + 1 ;  
-                                      }
-                                      if (document.formulaire1.k.value != reponses[10]){ 
-                                        erreur = erreur + 1 ;  
-                                      }
-                                      if (document.formulaire1.l.value != reponses[11]){ 
-                                        erreur = erreur + 1 ;  
-                                      }
-                                      
-                                      if (erreur == 0){
-                                        window.alert("Aucune erreur. BRAVO !") ;
-                                        return false ;
-                                      }
-                                      if (erreur >= 1){
-                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
-                                        return false ;
-                                      }
-                                    }
-                                      </script> 
 
                                       <h3>Fill the gaps</h3>
                                       <br>
                                       <p> Conjuge right the verbs </p>
-                                       <!--<p class="listedesmots"><u>mots à utiliser :</u>
-                                       cette, amis, maison, ce, poissons, se, rivière,  car, aussi, pont
-                                      </p>-->
-                                      
+
                                       <form name="formulaire1" action="URI" method="GET" onSubmit="return controler1() ;">
+                                      <p>
+                                        <img src="point_interro.png" alt = "point interro" width="20" align="left"/>
+                                        <a href="" onmouseover="javascript:visibilite('id_div_1'); return false;" onmouseout="javascript:visibilite('id_div_1'); return false;"><b>Help</b></a> 
+                                        <div id="id_div_1" style="display:none;"> 
+                                          <p> Attention aux verbes irréguliers ! </p>
+                                        </div>
                                       <p>
                                        1. I <input size="8" type="text" name="a"> (go) to Brighton last year. <br>
                                        2. She <input size="8" type="text" name="b"> (write) to her friend Kevin. <br>
@@ -194,83 +258,90 @@
                                       
                                       <p class="rep">
                                         <input type="reset" name="effacer" value="Reset">
-                                        <input type="submit" name="envoyer" value="Submit"> <!--name="envoyer"--> 
+                                        <input type="submit" name="envoyer" value="Submit"> 
                                       <p>
+                                      
                                       </table>
                                       </form> 
-                                      
-                                    <!--1. I [Pas de réponse]  went (go) to Brighton last year.
-Je suis allé à Brighton l'an dernier.
+                                      </p>
+                                  
+                                   <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <p><b>Click <u>here</u> to get the correction</b></p>
+                                        <div class="contenuSpoiler">
+                                            <p>
+                                              1. I went to Brighton last year.<br>
+                                              Je suis allé à Brighton l'an dernier.<br>
 
-Explications : Verbe irrégulier : go, went, gone
-
-
-2. She [Pas de réponse]  wrote (write) to her friend Kevin.
-Elle a écrit à son ami Kevin.
-
-Explications : Verbe irrégulier : write, wrote, written
-
-
-3. Yesterday, he [Pas de réponse]  played (play) football with Julien.
-Hier, il a joué au football avec Julien.
-
-Explications : Verbe régulier
+                                              <b>Explications :</b> Verbe irrégulier : go, went, gone<br><br>
 
 
-4. I [Pas de réponse]  spoke (speak) to my uncle on the phone.
-J'ai parlé à mon oncle au téléphone.
+                                              2. She wrote to her friend Kevin.<br>
+                                              Elle a écrit à son ami Kevin.<br>
 
-Explications : Verbe irrégulier : speak, spoke, spoken
-
-
-5. Mary [Pas de réponse]  bought (buy) a present for Camilla 2 days ago.
-Mary a acheté un cadeau pour Camilla il y a 2 jours.
-
-Explications : Verbe irrégulier : buy, bought, bought
+                                              <b>Explications :</b> Verbe irrégulier : write, wrote, written<br><br>
 
 
-6. My mother [Pas de réponse]  was (be) there yesterday.
-Ma mère était là hier.
+                                              3. Yesterday, he  played football with Julien.<br>
+                                              Hier, il a joué au football avec Julien.<br>
 
-Explications : Verbe irrégulier : be, was/were, been
-
-
-7. You [Pas de réponse]  saw (see) Maeva too when you went shopping.
-Tu as vu Maeva aussi quand tu es allée faire les courses.
-
-Explications : Verbe irrégulier : see, saw, seen
+                                              <b>Explications :</b> Verbe régulier<br><br>
 
 
-8. Did your mother [Pas de réponse]  drive (drive) you to school?
-Est-ce que ta mère t'a amené à l'école en voiture?
+                                              4. I spoke to my uncle on the phone.<br>
+                                              J'ai parlé à mon oncle au téléphone.<br>
 
-Explications : Verbe irrégulier (drive, drove, driven) mais cela n'a pas d'importance dans une question.
-
-
-9. He [Pas de réponse]  brought (bring) sweets for the pupils.
-Il a apporté des bonbons pour les élèves.
-
-Explications : Verbe irrégulier : bring, brought, brought
+                                              <b>Explications :</b> Verbe irrégulier : speak, spoke, spoken<br><br>
 
 
-10. I [Pas de réponse]  worked (work) in this supermarket when I was 16.
-J'ai travaillé dans ce supermarché quand j'avais 16 ans.
+                                              5. Mary bought a present for Camilla 2 days ago.<br>
+                                              Mary a acheté un cadeau pour Camilla il y a 2 jours.<br>
 
-Explications : Verbe régulier
-
-
-11. He [Pas de réponse]  left (leave) five minutes ago.
-Il est parti il y a cinq minutes.
-
-Explications : Verbe irrégulier : leave, left, left
+                                              <b>Explications :</b> Verbe irrégulier : buy, bought, bought<br><br>
 
 
-12. Sylvia [Pas de réponse]  taught (teach) Spanish some years ago.
-Sylvia a enseigné l'espagnol il y a quelques années.
+                                              6. My mother was there yesterday.<br>
+                                              Ma mère était là hier.<br>
 
-Explications : Verbe irrégulier : teach, taught, taught-->
-                                    
-                                   </p>
+                                              <b>Explications :</b> Verbe irrégulier : be, was/were, been<br><br>
+
+
+                                              7. You saw Maeva too when you went shopping.<br>
+                                              Tu as vu Maeva aussi quand tu es allée faire les courses.<br>
+
+                                              <b>Explications :</b> Verbe irrégulier : see, saw, seen<br><br>
+
+
+                                              8. Did your mother drive you to school?<br>
+                                              Est-ce que ta mère t'a amené à l'école en voiture?<br>
+
+                                              <b>Explications :</b> Verbe irrégulier (drive, drove, driven) mais cela n'a pas d'importance dans une question.<br><br>
+
+
+                                              9. He brought sweets for the pupils.<br>
+                                              Il a apporté des bonbons pour les élèves.<br>
+
+                                              <b>Explications :</b> Verbe irrégulier : bring, brought, brought<br><br>
+
+
+                                              10. I worked in this supermarket when I was 16.<br>
+                                              J'ai travaillé dans ce supermarché quand j'avais 16 ans.<br>
+
+                                              <b>Explications :</b> Verbe régulier<br><br>
+
+
+                                              11. He left five minutes ago.<br>
+                                              Il est parti il y a cinq minutes.<br>
+
+                                              <b>Explications :</b> Verbe irrégulier : leave, left, left<br><br>
+
+
+                                              12. Sylvia taught Spanish some years ago.<br>
+                                              Sylvia a enseigné l'espagnol il y a quelques années.<br>
+
+                                              <b>Explications :</b> Verbe irrégulier : teach, taught, taught
+                                            </p>
+                                        </div>
+                                      </div>
                                   </div>
                                 </div>
                         </div>
@@ -300,8 +371,7 @@ Explications : Verbe irrégulier : teach, taught, taught-->
                                     love / like / know / want / need / seem / mean / prefer / belong / understand / consist / suppose / remember / realise / forget / notice... <br>
                                     <span class="marge"> </span> <i>ex :</i> I needed to go to the doctor (et pas ‘I was needing...’)<br>
                                     <span class="marge"> </span> <i>ex :</i> I loved this movie ! (et pas ‘I was loving this movie’)<br>
-                                    <span class="marge"> </span> <i>ex :</i> We wanted to go out but it was raining (et pas ‘we were wanting...’)<br>
-<br>
+                                    <span class="marge"> </span> <i>ex :</i> We wanted to go out but it was raining (et pas ‘we were wanting...’)<br><br>
                                     </p>
 
                                     <h2> Emplois </h2> <br> <p>
@@ -337,64 +407,22 @@ Explications : Verbe irrégulier : teach, taught, taught-->
 
                         <div class="tab-pane fade" id="pce">
                                 <div class="media">
-                                  <!--<img src="img/img1.jpg" class="spacing-r" alt="">-->
                                   <div class="media-body">
                                     <h1 class="media-heading ruler-bottom">past continuous exercice</h1>  
                                     <p>
-                                    <script type="text/javascript">
-                                    function controler(){
-                                      var reponses = new Array ("was having", "phoned", "wanted", "was trying", "was explaining", "did not see", "were you doing", "was not watching", "were you not watching", "wanted" );
-                                      var erreur = 0 ;
-                                      if (document.formulaire.a.value != reponses[0]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.b.value != reponses[1]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.c.value != reponses[2]){ 
-                                        erreur = erreur + 1 ;
-                                      }
-                                      if (document.formulaire.d.value != reponses[3]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.e.value != reponses[4]){ 
-                                        erreur = erreur + 1 ;
-                                       }
-                                      if (document.formulaire.f.value != reponses[5]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.g.value != reponses[6]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.h.value != reponses[7]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.i.value != reponses[8]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      if (document.formulaire.j.value != reponses[9]){ 
-                                        erreur = erreur + 1 ; 
-                                      }
-                                      
-                                      if (erreur == 0){
-                                        window.alert("Aucune erreur. BRAVO !") ;
-                                        return false ;
-                                      }
-                                      if (erreur >= 1){
-                                        window.alert("Il reste encore " + erreur + " erreurs à corriger. Courage !") ;
-                                        return false ;
-                                      }
-                                    }
-                                      </script> 
+                                    
 
                                       <h3>Fill the gaps</h3>
                                       <br>
-                                      <p> Conjuge right the verbs
-                                       <!--<p class="listedesmots"><u>mots à utiliser :</u>
-                                       cette, amis, maison, ce, poissons, se, rivière,  car, aussi, pont
-                                      </p>-->
+                                      <p> Choose between the past simple and the past perfect to conjugate the verbs in brackets.
                                       
                                       <form name="formulaire" action="URI" method="GET" onSubmit="return controler() ;">
+                                      <p>
+                                        <img src="point_interro.png" alt = "point interro" width="20" align="left"/>
+                                        <a href="" onmouseover="javascript:visibilite('id_div_2'); return false;" onmouseout="javascript:visibilite('id_div_2'); return false;"><b>Help</b></a> 
+                                        <div id="id_div_2" style="display:none;"> 
+                                          <p> Past continuous : action en cours à un moment du passé <br> Past simple : passé daté, terminé </p>
+                                        </div>
                                       <p>
                                        1. At 8 o'clock yesterday evening, I <input size="8" type="text" name="a"> (have) dinner. <br>
                                        2. Matt <input size="8" type="text" name="b"> (phone) while we were watching a match on television. <br>
@@ -402,7 +430,7 @@ Explications : Verbe irrégulier : teach, taught, taught-->
                                        4. While we were all watching television, he <input size="8" type="text" name="d"> (try) to do his maths exercise.. <br>
                                        5. I <input size="8" type="text" name="e"> (explain) the exercise to him when Liverpool scored a splendid goal. <br>
                                        6. I  <input size="8" type="text" name="f"> (not see) it because I was on the phone in the hall. <br>
-                                       7. What <input size="8" type="text" name="g"> (you/do) when they scored ? ' my father asked.<br>
+                                       7. What <input size="8" type="text" name="g"> (you/do) when they scored ? my father asked.<br>
                                        8. I <input size="8" type="text" name="h"> (not / watch). <br>
                                        9. Why <input size="8" type="text" name="i"> (you / not / watch). <br>
                                        10. Because Matt <input size="8" type="text" name="j"> (want) help.
@@ -415,43 +443,53 @@ Explications : Verbe irrégulier : teach, taught, taught-->
                                       <p>
                                       </table>
                                       </form> 
-                                   <!-- 1. At 8 o'clock yesterday evening, I (have) [Pas de réponse]  was having dinner...
-
-2. Matt (phone) [Pas de réponse]  phoned while we were watching a match on television.
-
-3. He (want) [Pas de réponse]  wanted to tell me that he would better go to the cinema.
-
-4. While we were all watching television, he (try) [Pas de réponse]  was trying to do his maths exercise.
-
-5. I (explain) [Pas de réponse]  was explaining the exercise to him when Liverpool scored a splendid goal.
-
-6. I (not see) [Pas de réponse]  did not see it because I was on the phone in the hall.
-
-7. ' What (you / do) [Pas de réponse]  were you doing when they scored ? ' my father asked.
-
-8. ' I (not / watch) [Pas de réponse]  was not watching ! '
-
-9. 'Why (you / not / watch) [Pas de réponse]  were you not watching ? '
-
-10. ' Because Matt (want) [Pas de réponse]  wanted help. '-->
-
-                                    <!--<select id="list">
-    <option>Sélectionnez votre sexe</option>
-    <option>Homme</option>
-    <option>Femme</option>
-</select>
-
-<script>
-    var list = document.getElementById('list');
-
-    list.addEventListener('change', function() {
-
-        // On affiche le contenu de l'élément <option> ciblé par la propriété selectedIndex
-        alert(list.options[list.selectedIndex].innerHTML);
-
-    });
-</script>-->
+                                  
                                     </p>
+                                    <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <p><b>Click <u>here</u> to get the correction</b></p>
+                                        <div class="contenuSpoiler">
+                                            <p>1. At 8 o'clock yesterday evening, I was having dinner.<br>
+                                            A 8 heures hier soir, je dinais. <br>
+                                            <b>Explication :</b> On se replace dans la situation de la veille, je mangais. <br><br>
+
+                                            2. Matt phoned while we were watching a match on television.<br>
+                                            Matt téléphonait pendant qu'on regardait un match à la télévision. <br>
+                                            <b>Explication :</b> Quand deux actions se sont passées au même moment, sans avoir d’influence l’une envers l’autre (on utilise souvent ‘while’) <br><br>
+
+                                            3. He wanted to tell me that he would better go to the cinema.<br>
+                                            Il voulait me dire qu'il devait mieux aller au cinéma. <br>
+                                            <b>Explication :</b> Concordance des temps. <br><br>
+
+                                            4. While we were all watching television, he was trying to do his maths exercise.<br>
+                                            Pendant qu'on regardait tous la télévision, il essayait de faire ses exercices de maths. <br>
+                                            <b>Explication :</b> Quand deux actions se sont passées au même moment, sans avoir d’influence l’une envers l’autre <br><br>
+
+                                            5. I was explaining the exercise to him when Liverpool scored a splendid goal.<br>
+                                            J'étais en train de lui expliquer l'exercice quand Liverpool a marqué un superbe but. <br>
+                                            <b>Explication :</b> Pour dire qu’une action en cours a été interrompue. <br><br>
+
+                                            6. I did not see it because I was on the phone in the hall.<br>
+                                            Je ne l'ai pas vu parce que j'étais au téléphone dans le hall. <br>
+                                            <b>Explication :</b> Pour parler d’une action en cours à un moment passé. <br><br>
+
+                                            7. What were you doing when they scored ? my father asked.<br>
+                                            Que faisais-tu quand ils ont marqué ? mon père a demandé. <br>
+                                            <b>Explication :</b> Pour dire qu’une action en cours a été interrompue. <br><br>
+
+                                            8. I was not watching !<br>
+                                            Je ne regardais pas ! <br>
+                                            <b>Explication :</b> Pour parler d’une action en cours à un moment passé. <br><br>
+
+                                            9. Why were you not watching ?<br>
+                                            Pourquoi ne regardais-tu pas ? <br>
+                                            <b>Explication :</b> Pour parler d’une action en cours à un moment passé. <br><br>
+
+                                            10. Because Matt wanted help.<br>
+                                            Parce que Matt voulait de l'aide.<br>
+                                            <b>Explication :</b> Pour parler d’une action en cours à un moment passé. <br><br>
+                                            </p>
+                                        </div>
+                                      </div>
                                     
                                   </div>
                                 </div>
