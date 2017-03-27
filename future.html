@@ -88,7 +88,7 @@
                                       }
                                     }
                                     function controler(){
-                                      var reponses = new Array ("went", "wrote", "played", "spoke", "bought", "was", "saw", "drive", "brought", "worked", "left", "taught" );
+                                      var reponses = new Array ("will be", "will come", "will not rain", "will win", "will be", "will take", "will not cook", "Will you open", "will be", "Will you call");
                                       var erreur1 = 0 ;
                                       if (document.formulaire.a.value != reponses[0]){ 
                                         erreur1 = erreur1 + 1 ; 
@@ -118,12 +118,6 @@
                                         erreur1 = erreur1 + 1 ; 
                                       }
                                       if (document.formulaire.j.value != reponses[9]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.k.value != reponses[10]){ 
-                                        erreur1 = erreur1 + 1 ; 
-                                      }
-                                      if (document.formulaire.l.value != reponses[11]){ 
                                         erreur1 = erreur1 + 1 ; 
                                       }
                                       
@@ -232,18 +226,22 @@
                                       <p> Conjuge right the verbs </p>
                                       <form name="formulaire" action="URI" method="GET" onSubmit="return controler() ;">
                                       <p>
-                                       1. I <input size="8" type="text" name="a"> (go) to Brighton last year. <br>
-                                       2. She <input size="8" type="text" name="b"> (write) to her friend Kevin. <br>
-                                       3. Yesterday, he <input size="8" type="text" name="c"> (play) football with Julien. <br>
-                                       4. I <input size="8" type="text" name="d"> (speak) to my uncle on the phone. <br>
-                                       5. Mary <input size="8" type="text" name="e"> (buy) a present for Camilla 2 days ago. <br>
-                                       6. My mother  <input size="8" type="text" name="f"> (be) there yesterday. <br>
-                                       7. You<input size="8" type="text" name="g"> (see) Maeva too when you went shopping.<br>
-                                       8. Did your mother <input size="8" type="text" name="h"> (drive) you to school? <br>
-                                       9. He <input size="8" type="text" name="i"> (bring) sweets for the pupils.<br>
-                                       10. I <input size="8" type="text" name="j"> (work) in this supermarket when I was 16.<br>
-                                       11. He <input size="8" type="text" name="k"> (leave) five minutes ago.<br>
-                                       12. Silvia <input size="8" type="text" name="l"> (teach) Spanish some years ago.
+                                      <a href="" onmouseover="javascript:visibilite('id_div_1'); return false;" onmouseout="javascript:visibilite('id_div_1'); return false;"><b>Help </b></a> 
+                                        <div id="id_div_1" style="display:none;"> 
+                                          <p> Futur : will + verb, <br> Intérrogation : will + sujet + base verbale </p>
+                                        </div>
+                                      <p>
+                                       1. Her parents <input size="8" type="text" name="a"> (be) here in about an hour. <br>
+                                       2. All her friends <input size="8" type="text" name="b"> (come) to her wedding. <br>
+                                       3. I think it <input size="8" type="text" name="c"> (not / rain) tomorrow. <br>
+                                       4. Do you think Poland <input size="8" type="text" name="d"> (win) the World Cup ? <br>
+                                       5. Don't phone her now, she <input size="8" type="text" name="e"> (be) busy. <br>
+                                       6. I <input size="8" type="text" name="f"> (take) you to the airport tomorrow. <br>
+                                       7. No, I <input size="8" type="text" name="g"> (cook) your dinner, you can cook it yourself.<br>
+                                       8. <input size="8" type="text" name="h"> (you / open) the door for me please ? <br>
+                                       9. He doesn't know where he <input size="8" type="text" name="i"> (be) next Wednesday.<br>
+                                       10. <input size="8" type="text" name="j"> (you / call) me tomorrow ?
+                                       
                                       </p>
                                       
                                       <p class="rep">
@@ -253,6 +251,56 @@
                                       </table>
                                       </form> 
                                     </p>
+                                    
+
+                                  <div class="spoiler" onclick="ouvrirFermerSpoiler(this);">
+                                        <p><b>Click <u>here</u> to get the correction</b></p>
+                                        <div class="contenuSpoiler">
+                                            <p>
+                                            1. Her parents will be here in about an hour.<br>
+                                            Ses parents seront là d'ici 1 heure.<br>
+                                            <b>Explication :</b>Conjugaison de "be" au futur.<br><br>
+
+                                            2. All her friends will come to her wedding.<br>
+                                            Tous ses amis viendront à son mariage.<br>
+                                            <b>Explication :</b>Conjugaison de "come" au futur.<br><br>
+
+                                            3. I think it will not rain -ou- won't rain tomorrow.<br>
+                                            Je pense qu'il ne pleuvra pas demain. <br>
+                                            <b>Explication :</b>Négation de "rain" au futur.<br><br>
+
+                                            4. Do you think Poland will win the World Cup ?<br>
+                                            Penses-tu que la Pologne gagnera la coupe du monde ?<br>
+                                            <b>Explication :</b>Conjugaison de "win" au futur.<br><br>
+
+                                            5. Don't phone her now, she will be busy.<br>
+                                            Ne l'appelle pas maintenant, elle sera occupée. <br>
+                                            <b>Explication :</b>Conjugaison de "busy" au futur.<br><br>
+
+                                            6. I will take you to the airport tomorrow.<br>
+                                            Je t'ammènerai à l'aéroport demain.<br>
+                                            <b>Explication :</b>Conjugaison de "take" au futur.<br><br>
+
+                                            7. No, I will not cook -ou- won't cook your dinner, you can cook it yourself.<br>
+                                            Non, je ne cuisinerai pas ton diner, tu peux le cuisiner toi-même.<br>
+                                            <b>Explication :</b>Négation de "cook" au futur. <br><br>
+
+                                            8. Will you open the door for me please ?<br>
+                                            Pourras-tu ouvrir la porte pour moi s'il te plait.<br>
+                                            <b>Explication :</b>Intérrogation de "open" au futur.<br><br>
+
+                                            9. He doesn't know where he will be next Wednesday.<br>
+                                            Il ne sait pas où il sera Mercredi prochain. <br>
+                                            <b>Explication :</b>Conjugaison de "be" au futur.<br><br>
+
+                                            10. Will you call me tomorrow?<br>
+                                            M'appeleras-tu demain ?<br>
+                                            <b>Explication :</b>Intérrogation de "call" au futur.
+                                            
+
+                                            </p>
+                                        </div>
+                                      </div>
                                    
                                   </div>
                                 </div>
@@ -297,11 +345,13 @@
                                       <h3>Fill the gaps</h3>
                                       <br>
                                       <p> Chose the rigth form between simple present and present continuous
-                                       <!--<p class="listedesmots"><u>mots à utiliser :</u>
-                                       cette, amis, maison, ce, poissons, se, rivière,  car, aussi, pont
-                                      </p>-->
                                       
                                       <form name="formulaire1" action="URI" method="GET" onSubmit="return controler1() ;">
+                                      <p>
+                                      <a href="" onmouseover="javascript:visibilite('id_div_2'); return false;" onmouseout="javascript:visibilite('id_div_2'); return false;"><b>Help </b></a> 
+                                        <div id="id_div_2" style="display:none;"> 
+                                          <p> Futur : will + verb, <br> Futur continuous : will + be + base verbale + ing </p>
+                                        </div>
                                       <p>
                                        1. She <input size="8" type="text" name="a"> (send) Bruno the letter when she has time. <br>
                                        2. I <input size="8" type="text" name="b"> (sleep) at 11:30 p.m. this evening.<br>
@@ -329,43 +379,43 @@
                                             <p>
                                             1. She will send Bruno the letter when she has time.<br>
                                             Elle enverra la lettre à Bruno quand elle aura le temps.<br>
-                                            <b>Explication : </b><br><br>
+                                            <b>Explication : </b> will + verb <br><br>
 
                                             2. I will be sleeping at 11:30 p.m. this evening.<br>
                                             Je vais dormir a 11h30 ce soir.<br>
-                                            <b>Explication : </b><br><br>
+                                            <b>Explication : </b>Cela décrit une action qui va avoir lieu dans le futur et qui, au moment auquel on fait référence, sera toujours en cours.<br><br>
 
                                             3. The police officer will arrest the thug after you identify him.<br>
                                             L'officier de police va arrêter le voyou après que tu l'aies identifié.<br>
-                                            <b>Explication : </b><br><br>
+                                            <b>Explication : </b> will + verb<br><br>
 
                                             4. The truck will pick up the money later tomorrow afternoon.<br>
                                             Le camion viendra chercher l'argent demain après-midi. <br>
-                                            <b>Explication : </b><br><br>
+                                            <b>Explication : </b>will + verb<br><br>
 
                                             5. When you graduate, your parents will clap in the audience.<br>
                                             Quand tu seras diplomé, tes parents t'applaudiront depuis l'auditoire.<br>
-                                            <b>Explication : </b>
+                                            <b>Explication : </b>will + verb<br><br>
 
                                             6. When you wake up tomorrow morning, it will rain.<br>
                                             Quand tu te réveilleras demain matin, il pleuvra. <br>
-                                            <b>Explication : </b>
+                                            <b>Explication : </b>will + verb<br><br>
 
                                             7. His boss will be speaking with him tomorrow at 1:00 p.m..<br>
                                             Son chef parlera avec lui demain à 13h.<br>
-                                            <b>Explication : </b><br><br>
+                                            <b>Explication : </b>Cela décrit une action qui va avoir lieu dans le futur et qui, au moment auquel on fait référence, sera toujours en cours.<br><br>
 
                                             8. I will subscribe to the magazine next month.<br>
                                             Je m'abonnerai au magazine le mois prochain. <br>
-                                            <b>Explication : </b><br><br>
+                                            <b>Explication : </b>will + verb<br><br>
 
                                             9. They work hard. They will get good marks at the end of the school.<br>
                                             Ils travaillent dur. Ils vont avoir de bonnes notes à la fin de leur scolarité. <br>
-                                            <b>Explication : </b><br><br>
+                                            <b>Explication : </b>will + verb<br><br>
 
                                             10. Tomorrow at this time, I will be attending a conference.<br>
                                             Demain à ce moment-même, j'assisterai à une conférence.<br>
-                                            <b>Explication : </b>
+                                            <b>Explication : </b>Cela décrit une action qui va avoir lieu dans le futur et qui, au moment auquel on fait référence, sera toujours en cours.
 
                                             </p>
                                         </div>
